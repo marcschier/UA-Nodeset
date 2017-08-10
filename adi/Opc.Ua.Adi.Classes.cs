@@ -538,9 +538,9 @@ namespace Opc.Ua.Adi
     /// </summary>
     /// <exclude />
     public delegate ServiceResult AnalyserDeviceTypeGetConfigurationMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ref byte[] configData);
     #endif
     #endregion
@@ -664,9 +664,9 @@ namespace Opc.Ua.Adi
     /// </summary>
     /// <exclude />
     public delegate ServiceResult AnalyserDeviceTypeSetConfigurationMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         byte[] configData,
         ref string configDataDigest);
     #endif
@@ -786,9 +786,9 @@ namespace Opc.Ua.Adi
     /// </summary>
     /// <exclude />
     public delegate ServiceResult AnalyserDeviceTypeGetConfigDataDigestMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ref string configDataDigest);
     #endif
     #endregion
@@ -912,9 +912,9 @@ namespace Opc.Ua.Adi
     /// </summary>
     /// <exclude />
     public delegate ServiceResult AnalyserDeviceTypeCompareConfigDataDigestMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         string configDataDigest,
         ref bool isEqual);
     #endif
@@ -1407,9 +1407,9 @@ namespace Opc.Ua.Adi
     /// </summary>
     /// <exclude />
     public delegate ServiceResult AnalyserChannelTypeStartSingleAcquisitionMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ExecutionCycleEnumeration executionCycle,
         uint executionCycleSubcode,
         string selectedStream);
@@ -6082,9 +6082,9 @@ namespace Opc.Ua.Adi
     /// </summary>
     /// <exclude />
     public delegate ServiceResult MVAPredictMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         NodeId targetModel,
         int mainDataIndex,
         Variant[] inputs,

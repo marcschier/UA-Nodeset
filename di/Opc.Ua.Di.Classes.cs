@@ -2714,9 +2714,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult TransferToDeviceMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ref int transferID,
         ref int initTransferStatus);
     #endif
@@ -2839,9 +2839,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult TransferFromDeviceMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ref int transferID,
         ref int initTransferStatus);
     #endif
@@ -2973,9 +2973,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult FetchTransferResultDataMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         int transferID,
         int sequenceNumber,
         int maxParameterResultsToReturn,
@@ -3368,9 +3368,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult InitLockMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         string currentContext,
         ref int initLockStatus);
     #endif
@@ -3489,9 +3489,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult RenewLockMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ref int renewLockStatus);
     #endif
     #endregion
@@ -3609,9 +3609,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult ExitLockMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ref int exitLockStatus);
     #endif
     #endregion
@@ -3729,9 +3729,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult BreakLockMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ref int breakLockStatus);
     #endif
     #endregion

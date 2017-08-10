@@ -851,9 +851,9 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult InvokeActionMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         string actionName,
         string methodArguments,
         ref NodeId actionNodeId,
@@ -982,9 +982,9 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult RespondActionMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         NodeId actionNodeId,
         string response,
         ref int respondActionError);
@@ -1109,9 +1109,9 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult AbortActionMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         NodeId actionNodeId,
         ref int abortActionError);
     #endif
@@ -1510,9 +1510,9 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult GetEditContextMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         string parentId,
         WindowModeType targetWindowMode,
         ref string editContextId,
@@ -1641,9 +1641,9 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult RegisterNodesMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         string editContextId,
         RegistrationParameters[] nodesToRegister,
         ref RegisterNodesResult registerNodesStatus);
@@ -1768,9 +1768,9 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult ApplyMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         string editContextId,
         ref ApplyResult applyStatus);
     #endif
@@ -1894,9 +1894,9 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult ResetMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         string editContextId,
         ref int resetStatus);
     #endif
@@ -2020,9 +2020,9 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult DiscardMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         string editContextId,
         ref int discardStatus);
     #endif
@@ -2572,9 +2572,9 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult InitDirectAccessMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         string context,
         ref int initDirectAccessError);
     #endif
@@ -2701,9 +2701,9 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult TransferMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         string sendData,
         string receiveData,
         ref int transferError);
@@ -2828,9 +2828,9 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult EndDirectAccessMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         bool invalidateCache,
         ref int endDirectAccessError);
     #endif
@@ -3214,9 +3214,9 @@ namespace Opc.Ua.Fdi5
     /// </summary>
     /// <exclude />
     public delegate ServiceResult LogAuditTrailMessageMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         string message);
     #endif
     #endregion
