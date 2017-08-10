@@ -19770,7 +19770,7 @@ namespace Opc.Ua.MTConnect
         /// <summary>
         /// A description for the Description Property.
         /// </summary>
-        public PropertyState<string> Description
+        public new PropertyState<string> Description
         {
             get
             {
