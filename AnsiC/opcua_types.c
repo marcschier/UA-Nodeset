@@ -99,24 +99,24 @@ struct _OpcUa_EnumeratedType OpcUa_NodeClass_EnumeratedType =
 static struct _OpcUa_EnumeratedValue g_OpcUa_PermissionType_EnumeratedValues[] =
 {
     { "None", 0 },
-    { "Browse", 1 },
-    { "ReadRolePermissions", 2 },
-    { "WriteAttribute", 4 },
-    { "WriteRolePermissions", 8 },
-    { "WriteHistorizing", 16 },
-    { "Read", 32 },
-    { "Write", 64 },
-    { "ReadHistory", 128 },
-    { "InsertHistory", 256 },
-    { "ModifyHistory", 512 },
-    { "DeleteHistory", 1024 },
-    { "ReceiveEvents", 2048 },
-    { "Call", 4096 },
-    { "AddReference", 8192 },
-    { "RemoveReference", 16384 },
-    { "DeleteNode", 32768 },
-    { "AddNode", 65536 },
-    { "All", 131071 },
+    { "Browse", 0 },
+    { "ReadRolePermissions", 0 },
+    { "WriteAttribute", 0 },
+    { "WriteRolePermissions", 0 },
+    { "WriteHistorizing", 0 },
+    { "Read", 0 },
+    { "Write", 0 },
+    { "ReadHistory", 0 },
+    { "InsertHistory", 0 },
+    { "ModifyHistory", 0 },
+    { "DeleteHistory", 0 },
+    { "ReceiveEvents", 0 },
+    { "Call", 0 },
+    { "AddReference", 0 },
+    { "RemoveReference", 0 },
+    { "DeleteNode", 0 },
+    { "AddNode", 0 },
+    { "All", 0 },
     { OpcUa_Null, 0 }
 };
 
@@ -127,6 +127,52 @@ struct _OpcUa_EnumeratedType OpcUa_PermissionType_EnumeratedType =
 };
 #endif
 
+#ifndef OPCUA_EXCLUDE_AccessLevelType
+/*============================================================================
+ * OpcUa_AccessLevelType_EnumeratedType
+ *===========================================================================*/
+static struct _OpcUa_EnumeratedValue g_OpcUa_AccessLevelType_EnumeratedValues[] =
+{
+    { "None", 0 },
+    { "CurrentRead", 0 },
+    { "CurrentWrite", 0 },
+    { "HistoryRead", 0 },
+    { "HistoryWrite", 0 },
+    { "StatusWrite", 0 },
+    { "TimestampWrite", 0 },
+    { "NonatomicRead", 0 },
+    { "NonatomicWrite", 0 },
+    { "WriteFullArrayOnly", 0 },
+    { OpcUa_Null, 0 }
+};
+
+struct _OpcUa_EnumeratedType OpcUa_AccessLevelType_EnumeratedType =
+{
+    "AccessLevelType",
+    g_OpcUa_AccessLevelType_EnumeratedValues
+};
+#endif
+
+#ifndef OPCUA_EXCLUDE_EventNotifierType
+/*============================================================================
+ * OpcUa_EventNotifierType_EnumeratedType
+ *===========================================================================*/
+static struct _OpcUa_EnumeratedValue g_OpcUa_EventNotifierType_EnumeratedValues[] =
+{
+    { "None", 0 },
+    { "SubscribeToEvents", 0 },
+    { "HistoryRead", 0 },
+    { "HistoryWrite", 0 },
+    { OpcUa_Null, 0 }
+};
+
+struct _OpcUa_EnumeratedType OpcUa_EventNotifierType_EnumeratedType =
+{
+    "EventNotifierType",
+    g_OpcUa_EventNotifierType_EnumeratedValues
+};
+#endif
+
 #ifndef OPCUA_EXCLUDE_AccessRestrictionType
 /*============================================================================
  * OpcUa_AccessRestrictionType_EnumeratedType
@@ -134,9 +180,9 @@ struct _OpcUa_EnumeratedType OpcUa_PermissionType_EnumeratedType =
 static struct _OpcUa_EnumeratedValue g_OpcUa_AccessRestrictionType_EnumeratedValues[] =
 {
     { "None", 0 },
-    { "SigningRequired", 1 },
-    { "EncryptionRequired", 2 },
-    { "SessionRequired ", 4 },
+    { "SigningRequired", 0 },
+    { "EncryptionRequired", 0 },
+    { "SessionRequired ", 0 },
     { OpcUa_Null, 0 }
 };
 
@@ -3826,11 +3872,142 @@ struct _OpcUa_EncodeableType OpcUa_ServiceFault_EncodeableType =
 };
 #endif
 
-#ifndef OPCUA_EXCLUDE_SessionLessServiceMessageType
+#ifndef OPCUA_EXCLUDE_SessionlessInvokeRequestType
 /*============================================================================
- * OpcUa_SessionLessServiceMessageType_Initialize
+ * OpcUa_SessionlessInvokeRequestType_Initialize
  *===========================================================================*/
-OpcUa_Void OpcUa_SessionLessServiceMessageType_Initialize(OpcUa_SessionLessServiceMessageType* a_pValue)
+OpcUa_Void OpcUa_SessionlessInvokeRequestType_Initialize(OpcUa_SessionlessInvokeRequestType* a_pValue)
+{
+    if (a_pValue != OpcUa_Null)
+    {
+        OpcUa_Field_InitializeArray(UInt32, UrisVersion);
+        OpcUa_Field_InitializeArray(String, NamespaceUris);
+        OpcUa_Field_InitializeArray(String, ServerUris);
+        OpcUa_Field_InitializeArray(String, LocaleIds);
+        OpcUa_Field_Initialize(UInt32, ServiceId);
+    }
+}
+
+/*============================================================================
+ * OpcUa_SessionlessInvokeRequestType_Clear
+ *===========================================================================*/
+OpcUa_Void OpcUa_SessionlessInvokeRequestType_Clear(OpcUa_SessionlessInvokeRequestType* a_pValue)
+{
+    if (a_pValue != OpcUa_Null)
+    {
+        OpcUa_Field_ClearArray(UInt32, UrisVersion);
+        OpcUa_Field_ClearArray(String, NamespaceUris);
+        OpcUa_Field_ClearArray(String, ServerUris);
+        OpcUa_Field_ClearArray(String, LocaleIds);
+        OpcUa_Field_Clear(UInt32, ServiceId);
+    }
+}
+
+/*============================================================================
+ * OpcUa_SessionlessInvokeRequestType_GetSize
+ *===========================================================================*/
+OpcUa_StatusCode OpcUa_SessionlessInvokeRequestType_GetSize(OpcUa_SessionlessInvokeRequestType* a_pValue, OpcUa_Encoder* a_pEncoder, OpcUa_Int32* a_pSize)
+{
+    OpcUa_Int32 iSize = 0;
+
+    OpcUa_InitializeStatus(OpcUa_Module_Serializer, "SessionlessInvokeRequestType_GetSize");
+
+    OpcUa_ReturnErrorIfArgumentNull(a_pValue);
+    OpcUa_ReturnErrorIfArgumentNull(a_pEncoder);
+    OpcUa_ReturnErrorIfArgumentNull(a_pSize);
+
+    *a_pSize = -1;
+
+    OpcUa_Field_GetSizeArray(UInt32, UrisVersion);
+    OpcUa_Field_GetSizeArray(String, NamespaceUris);
+    OpcUa_Field_GetSizeArray(String, ServerUris);
+    OpcUa_Field_GetSizeArray(String, LocaleIds);
+    OpcUa_Field_GetSize(UInt32, ServiceId);
+
+    *a_pSize = iSize;
+
+    OpcUa_ReturnStatusCode;
+    OpcUa_BeginErrorHandling;
+
+    *a_pSize = -1;
+
+    OpcUa_FinishErrorHandling;
+}
+
+/*============================================================================
+ * OpcUa_SessionlessInvokeRequestType_Encode
+ *===========================================================================*/
+OpcUa_StatusCode OpcUa_SessionlessInvokeRequestType_Encode(OpcUa_SessionlessInvokeRequestType* a_pValue, OpcUa_Encoder* a_pEncoder)
+{
+    OpcUa_InitializeStatus(OpcUa_Module_Serializer, "SessionlessInvokeRequestType_Encode");
+
+    OpcUa_ReturnErrorIfArgumentNull(a_pValue);
+    OpcUa_ReturnErrorIfArgumentNull(a_pEncoder);
+
+    OpcUa_Field_WriteArray(UInt32, UrisVersion);
+    OpcUa_Field_WriteArray(String, NamespaceUris);
+    OpcUa_Field_WriteArray(String, ServerUris);
+    OpcUa_Field_WriteArray(String, LocaleIds);
+    OpcUa_Field_Write(UInt32, ServiceId);
+
+    OpcUa_ReturnStatusCode;
+    OpcUa_BeginErrorHandling;
+
+    /* nothing to do */
+
+    OpcUa_FinishErrorHandling;
+}
+
+/*============================================================================
+ * OpcUa_SessionlessInvokeRequestType_Decode
+ *===========================================================================*/
+OpcUa_StatusCode OpcUa_SessionlessInvokeRequestType_Decode(OpcUa_SessionlessInvokeRequestType* a_pValue, OpcUa_Decoder* a_pDecoder)
+{
+    OpcUa_InitializeStatus(OpcUa_Module_Serializer, "SessionlessInvokeRequestType_Decode");
+
+    OpcUa_ReturnErrorIfArgumentNull(a_pValue);
+    OpcUa_ReturnErrorIfArgumentNull(a_pDecoder);
+
+    OpcUa_SessionlessInvokeRequestType_Initialize(a_pValue);
+
+    OpcUa_Field_ReadArray(UInt32, UrisVersion);
+    OpcUa_Field_ReadArray(String, NamespaceUris);
+    OpcUa_Field_ReadArray(String, ServerUris);
+    OpcUa_Field_ReadArray(String, LocaleIds);
+    OpcUa_Field_Read(UInt32, ServiceId);
+
+    OpcUa_ReturnStatusCode;
+    OpcUa_BeginErrorHandling;
+
+    OpcUa_SessionlessInvokeRequestType_Clear(a_pValue);
+
+    OpcUa_FinishErrorHandling;
+}
+
+/*============================================================================
+ * OpcUa_SessionlessInvokeRequestType_EncodeableType
+ *===========================================================================*/
+struct _OpcUa_EncodeableType OpcUa_SessionlessInvokeRequestType_EncodeableType =
+{
+    "SessionlessInvokeRequestType",
+    OpcUaId_SessionlessInvokeRequestType,
+    OpcUaId_SessionlessInvokeRequestType_Encoding_DefaultBinary,
+    OpcUaId_SessionlessInvokeRequestType_Encoding_DefaultXml,
+    OpcUa_Null,
+    sizeof(OpcUa_SessionlessInvokeRequestType),
+    (OpcUa_EncodeableObject_PfnInitialize*)OpcUa_SessionlessInvokeRequestType_Initialize,
+    (OpcUa_EncodeableObject_PfnClear*)OpcUa_SessionlessInvokeRequestType_Clear,
+    (OpcUa_EncodeableObject_PfnGetSize*)OpcUa_SessionlessInvokeRequestType_GetSize,
+    (OpcUa_EncodeableObject_PfnEncode*)OpcUa_SessionlessInvokeRequestType_Encode,
+    (OpcUa_EncodeableObject_PfnDecode*)OpcUa_SessionlessInvokeRequestType_Decode
+};
+#endif
+
+#ifndef OPCUA_EXCLUDE_SessionlessInvokeResponseType
+/*============================================================================
+ * OpcUa_SessionlessInvokeResponseType_Initialize
+ *===========================================================================*/
+OpcUa_Void OpcUa_SessionlessInvokeResponseType_Initialize(OpcUa_SessionlessInvokeResponseType* a_pValue)
 {
     if (a_pValue != OpcUa_Null)
     {
@@ -3841,9 +4018,9 @@ OpcUa_Void OpcUa_SessionLessServiceMessageType_Initialize(OpcUa_SessionLessServi
 }
 
 /*============================================================================
- * OpcUa_SessionLessServiceMessageType_Clear
+ * OpcUa_SessionlessInvokeResponseType_Clear
  *===========================================================================*/
-OpcUa_Void OpcUa_SessionLessServiceMessageType_Clear(OpcUa_SessionLessServiceMessageType* a_pValue)
+OpcUa_Void OpcUa_SessionlessInvokeResponseType_Clear(OpcUa_SessionlessInvokeResponseType* a_pValue)
 {
     if (a_pValue != OpcUa_Null)
     {
@@ -3854,13 +4031,13 @@ OpcUa_Void OpcUa_SessionLessServiceMessageType_Clear(OpcUa_SessionLessServiceMes
 }
 
 /*============================================================================
- * OpcUa_SessionLessServiceMessageType_GetSize
+ * OpcUa_SessionlessInvokeResponseType_GetSize
  *===========================================================================*/
-OpcUa_StatusCode OpcUa_SessionLessServiceMessageType_GetSize(OpcUa_SessionLessServiceMessageType* a_pValue, OpcUa_Encoder* a_pEncoder, OpcUa_Int32* a_pSize)
+OpcUa_StatusCode OpcUa_SessionlessInvokeResponseType_GetSize(OpcUa_SessionlessInvokeResponseType* a_pValue, OpcUa_Encoder* a_pEncoder, OpcUa_Int32* a_pSize)
 {
     OpcUa_Int32 iSize = 0;
 
-    OpcUa_InitializeStatus(OpcUa_Module_Serializer, "SessionLessServiceMessageType_GetSize");
+    OpcUa_InitializeStatus(OpcUa_Module_Serializer, "SessionlessInvokeResponseType_GetSize");
 
     OpcUa_ReturnErrorIfArgumentNull(a_pValue);
     OpcUa_ReturnErrorIfArgumentNull(a_pEncoder);
@@ -3883,11 +4060,11 @@ OpcUa_StatusCode OpcUa_SessionLessServiceMessageType_GetSize(OpcUa_SessionLessSe
 }
 
 /*============================================================================
- * OpcUa_SessionLessServiceMessageType_Encode
+ * OpcUa_SessionlessInvokeResponseType_Encode
  *===========================================================================*/
-OpcUa_StatusCode OpcUa_SessionLessServiceMessageType_Encode(OpcUa_SessionLessServiceMessageType* a_pValue, OpcUa_Encoder* a_pEncoder)
+OpcUa_StatusCode OpcUa_SessionlessInvokeResponseType_Encode(OpcUa_SessionlessInvokeResponseType* a_pValue, OpcUa_Encoder* a_pEncoder)
 {
-    OpcUa_InitializeStatus(OpcUa_Module_Serializer, "SessionLessServiceMessageType_Encode");
+    OpcUa_InitializeStatus(OpcUa_Module_Serializer, "SessionlessInvokeResponseType_Encode");
 
     OpcUa_ReturnErrorIfArgumentNull(a_pValue);
     OpcUa_ReturnErrorIfArgumentNull(a_pEncoder);
@@ -3905,16 +4082,16 @@ OpcUa_StatusCode OpcUa_SessionLessServiceMessageType_Encode(OpcUa_SessionLessSer
 }
 
 /*============================================================================
- * OpcUa_SessionLessServiceMessageType_Decode
+ * OpcUa_SessionlessInvokeResponseType_Decode
  *===========================================================================*/
-OpcUa_StatusCode OpcUa_SessionLessServiceMessageType_Decode(OpcUa_SessionLessServiceMessageType* a_pValue, OpcUa_Decoder* a_pDecoder)
+OpcUa_StatusCode OpcUa_SessionlessInvokeResponseType_Decode(OpcUa_SessionlessInvokeResponseType* a_pValue, OpcUa_Decoder* a_pDecoder)
 {
-    OpcUa_InitializeStatus(OpcUa_Module_Serializer, "SessionLessServiceMessageType_Decode");
+    OpcUa_InitializeStatus(OpcUa_Module_Serializer, "SessionlessInvokeResponseType_Decode");
 
     OpcUa_ReturnErrorIfArgumentNull(a_pValue);
     OpcUa_ReturnErrorIfArgumentNull(a_pDecoder);
 
-    OpcUa_SessionLessServiceMessageType_Initialize(a_pValue);
+    OpcUa_SessionlessInvokeResponseType_Initialize(a_pValue);
 
     OpcUa_Field_ReadArray(String, NamespaceUris);
     OpcUa_Field_ReadArray(String, ServerUris);
@@ -3923,27 +4100,27 @@ OpcUa_StatusCode OpcUa_SessionLessServiceMessageType_Decode(OpcUa_SessionLessSer
     OpcUa_ReturnStatusCode;
     OpcUa_BeginErrorHandling;
 
-    OpcUa_SessionLessServiceMessageType_Clear(a_pValue);
+    OpcUa_SessionlessInvokeResponseType_Clear(a_pValue);
 
     OpcUa_FinishErrorHandling;
 }
 
 /*============================================================================
- * OpcUa_SessionLessServiceMessageType_EncodeableType
+ * OpcUa_SessionlessInvokeResponseType_EncodeableType
  *===========================================================================*/
-struct _OpcUa_EncodeableType OpcUa_SessionLessServiceMessageType_EncodeableType =
+struct _OpcUa_EncodeableType OpcUa_SessionlessInvokeResponseType_EncodeableType =
 {
-    "SessionLessServiceMessageType",
-    OpcUaId_SessionLessServiceMessageType,
-    OpcUaId_SessionLessServiceMessageType_Encoding_DefaultBinary,
-    OpcUaId_SessionLessServiceMessageType_Encoding_DefaultXml,
+    "SessionlessInvokeResponseType",
+    OpcUaId_SessionlessInvokeResponseType,
+    OpcUaId_SessionlessInvokeResponseType_Encoding_DefaultBinary,
+    OpcUaId_SessionlessInvokeResponseType_Encoding_DefaultXml,
     OpcUa_Null,
-    sizeof(OpcUa_SessionLessServiceMessageType),
-    (OpcUa_EncodeableObject_PfnInitialize*)OpcUa_SessionLessServiceMessageType_Initialize,
-    (OpcUa_EncodeableObject_PfnClear*)OpcUa_SessionLessServiceMessageType_Clear,
-    (OpcUa_EncodeableObject_PfnGetSize*)OpcUa_SessionLessServiceMessageType_GetSize,
-    (OpcUa_EncodeableObject_PfnEncode*)OpcUa_SessionLessServiceMessageType_Encode,
-    (OpcUa_EncodeableObject_PfnDecode*)OpcUa_SessionLessServiceMessageType_Decode
+    sizeof(OpcUa_SessionlessInvokeResponseType),
+    (OpcUa_EncodeableObject_PfnInitialize*)OpcUa_SessionlessInvokeResponseType_Initialize,
+    (OpcUa_EncodeableObject_PfnClear*)OpcUa_SessionlessInvokeResponseType_Clear,
+    (OpcUa_EncodeableObject_PfnGetSize*)OpcUa_SessionlessInvokeResponseType_GetSize,
+    (OpcUa_EncodeableObject_PfnEncode*)OpcUa_SessionlessInvokeResponseType_Encode,
+    (OpcUa_EncodeableObject_PfnDecode*)OpcUa_SessionlessInvokeResponseType_Decode
 };
 #endif
 
@@ -11547,32 +11724,32 @@ struct _OpcUa_EncodeableType OpcUa_DeleteReferencesResponse_EncodeableType =
 static struct _OpcUa_EnumeratedValue g_OpcUa_AttributeWriteMask_EnumeratedValues[] =
 {
     { "None", 0 },
-    { "AccessLevel", 1 },
-    { "ArrayDimensions", 2 },
-    { "BrowseName", 4 },
-    { "ContainsNoLoops", 8 },
-    { "DataType", 16 },
-    { "Description", 32 },
-    { "DisplayName", 64 },
-    { "EventNotifier", 128 },
-    { "Executable", 256 },
-    { "Historizing", 512 },
-    { "InverseName", 1024 },
-    { "IsAbstract", 2048 },
-    { "MinimumSamplingInterval", 4096 },
-    { "NodeClass", 8192 },
-    { "NodeId", 16384 },
-    { "Symmetric", 32768 },
-    { "UserAccessLevel", 65536 },
-    { "UserExecutable", 131072 },
-    { "UserWriteMask", 262144 },
-    { "ValueRank", 524288 },
-    { "WriteMask", 1048576 },
-    { "ValueForVariableType", 2097152 },
-    { "DataTypeDefinition", 4194304 },
-    { "RolePermissions", 8388608 },
-    { "AccessRestrictions", 16777216 },
-    { "AccessLevelEx", 33554432 },
+    { "AccessLevel", 0 },
+    { "ArrayDimensions", 0 },
+    { "BrowseName", 0 },
+    { "ContainsNoLoops", 0 },
+    { "DataType", 0 },
+    { "Description", 0 },
+    { "DisplayName", 0 },
+    { "EventNotifier", 0 },
+    { "Executable", 0 },
+    { "Historizing", 0 },
+    { "InverseName", 0 },
+    { "IsAbstract", 0 },
+    { "MinimumSamplingInterval", 0 },
+    { "NodeClass", 0 },
+    { "NodeId", 0 },
+    { "Symmetric", 0 },
+    { "UserAccessLevel", 0 },
+    { "UserExecutable", 0 },
+    { "UserWriteMask", 0 },
+    { "ValueRank", 0 },
+    { "WriteMask", 0 },
+    { "ValueForVariableType", 0 },
+    { "DataTypeDefinition", 0 },
+    { "RolePermissions", 0 },
+    { "AccessRestrictions", 0 },
+    { "AccessLevelEx", 0 },
     { OpcUa_Null, 0 }
 };
 
@@ -28911,8 +29088,11 @@ static OpcUa_EncodeableType* g_OpcUa_KnownEncodeableTypes[] =
     #ifndef OPCUA_EXCLUDE_ServiceFault
     &OpcUa_ServiceFault_EncodeableType,
     #endif
-    #ifndef OPCUA_EXCLUDE_SessionLessServiceMessageType
-    &OpcUa_SessionLessServiceMessageType_EncodeableType,
+    #ifndef OPCUA_EXCLUDE_SessionlessInvokeRequestType
+    &OpcUa_SessionlessInvokeRequestType_EncodeableType,
+    #endif
+    #ifndef OPCUA_EXCLUDE_SessionlessInvokeResponseType
+    &OpcUa_SessionlessInvokeResponseType_EncodeableType,
     #endif
     #ifndef OPCUA_EXCLUDE_FindServers
     &OpcUa_FindServersRequest_EncodeableType,
