@@ -26467,20 +26467,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -26493,9 +26493,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     subscriptionId,
                     ref serverHandles,
                     ref clientHandles);
@@ -26594,20 +26594,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -26617,9 +26617,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     subscriptionId);
             }
 
@@ -26714,20 +26714,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -26740,9 +26740,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     subscriptionId,
                     lifetimeInHours,
                     ref revisedLifetimeInHours);
@@ -26843,20 +26843,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -26870,9 +26870,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     state,
                     estimatedReturnTime,
                     secondsTillShutdown,
@@ -29442,20 +29442,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -29467,9 +29467,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     mode,
                     ref fileHandle);
             }
@@ -29565,20 +29565,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -29588,9 +29588,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     fileHandle);
             }
 
@@ -29684,20 +29684,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -29710,9 +29710,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     fileHandle,
                     length,
                     ref data);
@@ -29811,20 +29811,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -29835,9 +29835,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     fileHandle,
                     data);
             }
@@ -29933,20 +29933,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -29958,9 +29958,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     fileHandle,
                     ref position);
             }
@@ -30057,20 +30057,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -30081,9 +30081,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     fileHandle,
                     position);
             }
@@ -30498,20 +30498,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -30523,9 +30523,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     directoryName,
                     ref directoryNodeId);
             }
@@ -30624,20 +30624,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -30651,9 +30651,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     fileName,
                     requestFileOpen,
                     ref fileNodeId,
@@ -30754,20 +30754,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -30777,9 +30777,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     objectToDelete);
             }
 
@@ -30875,20 +30875,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -30903,9 +30903,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     objectToMoveOrCopy,
                     targetDirectory,
                     createCopy,
@@ -31327,20 +31327,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -31354,9 +31354,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     generateOptions,
                     ref fileNodeId,
                     ref fileHandle,
@@ -31461,20 +31461,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -31487,9 +31487,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     generateOptions,
                     ref fileNodeId,
                     ref fileHandle);
@@ -31590,20 +31590,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -31615,9 +31615,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     fileHandle,
                     ref completionStateMachine);
             }
@@ -32085,20 +32085,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -32111,9 +32111,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     roleName,
                     namespaceUri,
                     ref roleNodeId);
@@ -32211,20 +32211,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -32234,9 +32234,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     roleNodeId);
             }
 
@@ -32963,20 +32963,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -32986,9 +32986,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     ruleToAdd);
             }
 
@@ -33080,20 +33080,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -33103,9 +33103,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     ruleToRemove);
             }
 
@@ -33197,20 +33197,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -33220,9 +33220,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     ruleToAdd);
             }
 
@@ -33314,20 +33314,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -33337,9 +33337,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     ruleToRemove);
             }
 
@@ -33431,20 +33431,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -33454,9 +33454,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     ruleToAdd);
             }
 
@@ -33548,20 +33548,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -33571,9 +33571,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     ruleToRemove);
             }
 
@@ -38432,20 +38432,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -38456,9 +38456,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     subscriptionId,
                     monitoredItemId);
             }
@@ -38553,20 +38553,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -38576,9 +38576,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     subscriptionId);
             }
 
@@ -38672,20 +38672,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -38696,9 +38696,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     eventId,
                     comment);
             }
@@ -39334,20 +39334,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -39357,9 +39357,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     selectedResponse);
             }
 
@@ -41727,20 +41727,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -41750,9 +41750,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     shelvingTime);
             }
 
@@ -54731,20 +54731,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -54756,9 +54756,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     masks,
                     ref fileHandle);
             }
@@ -54856,20 +54856,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -54881,9 +54881,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     fileHandle,
                     ref applyChangesRequired);
             }
@@ -54980,20 +54980,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -55004,9 +55004,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     certificate,
                     isTrustedCertificate);
             }
@@ -55101,20 +55101,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -55125,9 +55125,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     thumbprint,
                     isTrustedCertificate);
             }
@@ -56788,20 +56788,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -56818,9 +56818,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     certificateGroupId,
                     certificateTypeId,
                     certificate,
@@ -56931,20 +56931,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -56960,9 +56960,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     certificateGroupId,
                     certificateTypeId,
                     subjectName,
@@ -57066,20 +57066,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -57089,9 +57089,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     ref certificates);
             }
 
@@ -58464,20 +58464,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -58490,9 +58490,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     credentialId,
                     credentialSecret,
                     certificateThumbprint,
@@ -59860,20 +59860,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -59891,9 +59891,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     securityGroupId,
                     futureKeyCount,
                     ref securityPolicyUri,
@@ -60008,20 +60008,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -60033,9 +60033,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     securityGroupId,
                     ref securityGroupNodeId);
             }
@@ -60134,20 +60134,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -60160,9 +60160,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     securityGroupName,
                     ref securityGroupId,
                     ref securityGroupNodeId);
@@ -60262,20 +60262,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -60285,9 +60285,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     securityGroupNodeId);
             }
 
@@ -61381,20 +61381,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -61410,9 +61410,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     securityGroupId,
                     securityPolicyUri,
                     currentTokenId,
@@ -61516,20 +61516,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -61539,9 +61539,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     connectionId);
             }
 
@@ -62126,20 +62126,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -62152,9 +62152,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     fieldName,
                     fieldValue,
                     ref fieldId);
@@ -62252,20 +62252,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -62275,9 +62275,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     fieldId);
             }
 
@@ -62672,20 +62672,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -62701,9 +62701,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     configurationVersion,
                     fieldNameAliases,
                     promotedFields,
@@ -62812,20 +62812,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -62839,9 +62839,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     configurationVersion,
                     variablesToRemove,
                     ref newConfigurationVersion,
@@ -63273,20 +63273,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -63301,9 +63301,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     configurationVersion,
                     fieldNameAliases,
                     promotedFields,
@@ -63882,20 +63882,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -63912,9 +63912,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     name,
                     fieldNameAliases,
                     promotedFields,
@@ -64028,20 +64028,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -64059,9 +64059,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     name,
                     eventNotifier,
                     fieldNameAliases,
@@ -64170,20 +64170,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -64193,9 +64193,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     dataSetId);
             }
 
@@ -64802,20 +64802,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -64825,9 +64825,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     groupId);
             }
 
@@ -65841,20 +65841,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -65864,9 +65864,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     dataSetWriterNodeId);
             }
 
@@ -66293,20 +66293,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -66316,9 +66316,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     dataSetReaderNodeId);
             }
 
@@ -67760,20 +67760,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -67786,9 +67786,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     configurationVersion,
                     targetVariablesToAdd,
                     ref addResults);
@@ -67889,20 +67889,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -67915,9 +67915,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     parentNodeName,
                     rolePermissions,
                     ref parentNodeId);
@@ -68517,20 +68517,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -68543,9 +68543,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     configurationVersion,
                     targetVariablesToAdd,
                     ref addResults);
@@ -68646,20 +68646,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -68672,9 +68672,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     configurationVersion,
                     targetsToRemove,
                     ref removeResults);
@@ -71376,20 +71376,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -71403,9 +71403,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     connectionName,
                     address,
                     publisherId,
@@ -71878,20 +71878,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -71912,9 +71912,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     groupName,
                     publishingInterval,
                     publishingOffset,
@@ -72032,20 +72032,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -72060,9 +72060,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     groupName,
                     securityMode,
                     securityGroupId,
@@ -72826,20 +72826,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -72856,9 +72856,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     dataSetWriterName,
                     dataSetWriterId,
                     publishedDataSetId,
@@ -73210,20 +73210,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -73243,9 +73243,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     dataSetReaderName,
                     publisherId,
                     dataSetWriterId,
@@ -74264,20 +74264,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -74291,9 +74291,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     connectionName,
                     address,
                     publisherId,
@@ -74654,20 +74654,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -74686,9 +74686,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     groupName,
                     publishingInterval,
                     keepAliveTime,
@@ -74802,20 +74802,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -74830,9 +74830,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     groupName,
                     securityMode,
                     securityGroupId,
@@ -75177,20 +75177,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -75208,9 +75208,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     dataSetWriterName,
                     publishedDataSetId,
                     queueName,
@@ -75558,20 +75558,20 @@ namespace Opc.Ua
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -75589,9 +75589,9 @@ namespace Opc.Ua
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     dataSetReaderName,
                     queueName,
                     metaDataQueueName,
