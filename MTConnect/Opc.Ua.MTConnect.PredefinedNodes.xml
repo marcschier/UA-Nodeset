@@ -2135,19 +2135,19 @@
       <uax:Identifier>ns=1;i=7188</uax:Identifier>
     </uax:SuperTypeId>
   </AngleConditionType>
-  <Angular-AccelerationConditionType xmlns="http://opcfoundation.org/UA/MTConnect/">
+  <Angular_AccelerationConditionType xmlns="http://opcfoundation.org/UA/MTConnect/">
     <uax:NodeClass>ObjectType_8</uax:NodeClass>
     <uax:NodeId>
       <uax:Identifier>ns=1;i=7493</uax:Identifier>
     </uax:NodeId>
     <uax:BrowseName>
       <uax:NamespaceIndex>1</uax:NamespaceIndex>
-      <uax:Name>Angular-AccelerationConditionType</uax:Name>
+      <uax:Name>Angular_AccelerationConditionType</uax:Name>
     </uax:BrowseName>
     <uax:SuperTypeId>
       <uax:Identifier>ns=1;i=7188</uax:Identifier>
     </uax:SuperTypeId>
-  </Angular-AccelerationConditionType>
+  </Angular_AccelerationConditionType>
   <Angular_VelocityConditionType xmlns="http://opcfoundation.org/UA/MTConnect/">
     <uax:NodeClass>ObjectType_8</uax:NodeClass>
     <uax:NodeId>

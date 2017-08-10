@@ -681,9 +681,9 @@ namespace Opc.Ua.MTConnect
         public const uint AngleConditionType = 7432;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType ObjectType.
+        /// The identifier for the Angular_AccelerationConditionType ObjectType.
         /// </summary>
-        public const uint Angular-AccelerationConditionType = 7493;
+        public const uint Angular_AccelerationConditionType = 7493;
 
         /// <summary>
         /// The identifier for the Angular_VelocityConditionType ObjectType.
@@ -1331,59 +1331,59 @@ namespace Opc.Ua.MTConnect
         public const uint AngleConditionType_LimitState_LastTransition_Id = 7486;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_EnabledState_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_EnabledState_Id Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_EnabledState_Id = 7509;
+        public const uint Angular_AccelerationConditionType_EnabledState_Id = 7509;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_Quality_SourceTimestamp Variable.
+        /// The identifier for the Angular_AccelerationConditionType_Quality_SourceTimestamp Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_Quality_SourceTimestamp = 7518;
+        public const uint Angular_AccelerationConditionType_Quality_SourceTimestamp = 7518;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LastSeverity_SourceTimestamp Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LastSeverity_SourceTimestamp Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_LastSeverity_SourceTimestamp = 7520;
+        public const uint Angular_AccelerationConditionType_LastSeverity_SourceTimestamp = 7520;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_Comment_SourceTimestamp Variable.
+        /// The identifier for the Angular_AccelerationConditionType_Comment_SourceTimestamp Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_Comment_SourceTimestamp = 7522;
+        public const uint Angular_AccelerationConditionType_Comment_SourceTimestamp = 7522;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_AddComment_InputArguments Variable.
+        /// The identifier for the Angular_AccelerationConditionType_AddComment_InputArguments Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_AddComment_InputArguments = 7527;
+        public const uint Angular_AccelerationConditionType_AddComment_InputArguments = 7527;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_ConditionRefresh_InputArguments Variable.
+        /// The identifier for the Angular_AccelerationConditionType_ConditionRefresh_InputArguments Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_ConditionRefresh_InputArguments = 7529;
+        public const uint Angular_AccelerationConditionType_ConditionRefresh_InputArguments = 7529;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_ConditionRefresh2_InputArguments Variable.
+        /// The identifier for the Angular_AccelerationConditionType_ConditionRefresh2_InputArguments Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_ConditionRefresh2_InputArguments = 10125;
+        public const uint Angular_AccelerationConditionType_ConditionRefresh2_InputArguments = 10125;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_ActiveState_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_ActiveState_Id Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_ActiveState_Id = 7532;
+        public const uint Angular_AccelerationConditionType_ActiveState_Id = 7532;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LimitState_CurrentState Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LimitState_CurrentState Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_LimitState_CurrentState = 7541;
+        public const uint Angular_AccelerationConditionType_LimitState_CurrentState = 7541;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LimitState_CurrentState_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LimitState_CurrentState_Id Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_LimitState_CurrentState_Id = 7542;
+        public const uint Angular_AccelerationConditionType_LimitState_CurrentState_Id = 7542;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LimitState_LastTransition_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LimitState_LastTransition_Id Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_LimitState_LastTransition_Id = 7547;
+        public const uint Angular_AccelerationConditionType_LimitState_LastTransition_Id = 7547;
 
         /// <summary>
         /// The identifier for the Angular_VelocityConditionType_EnabledState_Id Variable.
@@ -4926,9 +4926,9 @@ namespace Opc.Ua.MTConnect
         public static readonly ExpandedNodeId AngleConditionType = new ExpandedNodeId(Opc.Ua.MTConnect.ObjectTypes.AngleConditionType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType ObjectType.
+        /// The identifier for the Angular_AccelerationConditionType ObjectType.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType = new ExpandedNodeId(Opc.Ua.MTConnect.ObjectTypes.Angular-AccelerationConditionType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType = new ExpandedNodeId(Opc.Ua.MTConnect.ObjectTypes.Angular_AccelerationConditionType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
         /// The identifier for the Angular_VelocityConditionType ObjectType.
@@ -5576,59 +5576,59 @@ namespace Opc.Ua.MTConnect
         public static readonly ExpandedNodeId AngleConditionType_LimitState_LastTransition_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.AngleConditionType_LimitState_LastTransition_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_EnabledState_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_EnabledState_Id Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_EnabledState_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_EnabledState_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_EnabledState_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_EnabledState_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_Quality_SourceTimestamp Variable.
+        /// The identifier for the Angular_AccelerationConditionType_Quality_SourceTimestamp Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_Quality_SourceTimestamp = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_Quality_SourceTimestamp, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_Quality_SourceTimestamp = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_Quality_SourceTimestamp, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LastSeverity_SourceTimestamp Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LastSeverity_SourceTimestamp Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_LastSeverity_SourceTimestamp = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_LastSeverity_SourceTimestamp, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_LastSeverity_SourceTimestamp = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_LastSeverity_SourceTimestamp, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_Comment_SourceTimestamp Variable.
+        /// The identifier for the Angular_AccelerationConditionType_Comment_SourceTimestamp Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_Comment_SourceTimestamp = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_Comment_SourceTimestamp, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_Comment_SourceTimestamp = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_Comment_SourceTimestamp, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_AddComment_InputArguments Variable.
+        /// The identifier for the Angular_AccelerationConditionType_AddComment_InputArguments Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_AddComment_InputArguments = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_AddComment_InputArguments, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_AddComment_InputArguments = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_AddComment_InputArguments, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_ConditionRefresh_InputArguments Variable.
+        /// The identifier for the Angular_AccelerationConditionType_ConditionRefresh_InputArguments Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_ConditionRefresh_InputArguments = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_ConditionRefresh_InputArguments, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_ConditionRefresh_InputArguments = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_ConditionRefresh_InputArguments, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_ConditionRefresh2_InputArguments Variable.
+        /// The identifier for the Angular_AccelerationConditionType_ConditionRefresh2_InputArguments Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_ConditionRefresh2_InputArguments = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_ConditionRefresh2_InputArguments, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_ConditionRefresh2_InputArguments = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_ConditionRefresh2_InputArguments, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_ActiveState_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_ActiveState_Id Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_ActiveState_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_ActiveState_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_ActiveState_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_ActiveState_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LimitState_CurrentState Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LimitState_CurrentState Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_LimitState_CurrentState = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_LimitState_CurrentState, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_LimitState_CurrentState = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_LimitState_CurrentState, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LimitState_CurrentState_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LimitState_CurrentState_Id Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_LimitState_CurrentState_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_LimitState_CurrentState_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_LimitState_CurrentState_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_LimitState_CurrentState_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LimitState_LastTransition_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LimitState_LastTransition_Id Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_LimitState_LastTransition_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_LimitState_LastTransition_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_LimitState_LastTransition_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_LimitState_LastTransition_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
         /// The identifier for the Angular_VelocityConditionType_EnabledState_Id Variable.
@@ -8600,14 +8600,14 @@ namespace Opc.Ua.MTConnect
         public const string AngleType = "AngleType";
 
         /// <summary>
+        /// The BrowseName for the Angular_AccelerationConditionType component.
+        /// </summary>
+        public const string Angular_AccelerationConditionType = "Angular_AccelerationConditionType";
+
+        /// <summary>
         /// The BrowseName for the Angular_VelocityConditionType component.
         /// </summary>
         public const string Angular_VelocityConditionType = "Angular_VelocityConditionType";
-
-        /// <summary>
-        /// The BrowseName for the Angular-AccelerationConditionType component.
-        /// </summary>
-        public const string Angular-AccelerationConditionType = "Angular-AccelerationConditionType";
 
         /// <summary>
         /// The BrowseName for the AngularAccelerationType component.

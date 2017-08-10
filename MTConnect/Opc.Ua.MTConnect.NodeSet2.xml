@@ -812,8 +812,8 @@
       <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=7188</Reference>
     </References>
   </UAObjectType>
-  <UAObjectType NodeId="ns=1;i=7493" BrowseName="1:Angular-AccelerationConditionType">
-    <DisplayName>Angular-AccelerationConditionType</DisplayName>
+  <UAObjectType NodeId="ns=1;i=7493" BrowseName="1:Angular_AccelerationConditionType">
+    <DisplayName>Angular_AccelerationConditionType</DisplayName>
     <References>
       <Reference ReferenceType="HasSubtype" IsForward="false">ns=1;i=7188</Reference>
     </References>
