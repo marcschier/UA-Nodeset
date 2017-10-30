@@ -1,8 +1,8 @@
 /* ========================================================================
- * Copyright (c) 2005-2016 The OPC Foundation, Inc. All rights reserved.
+ * Copyright (c) 2005-2018 The OPC Foundation, Inc. All rights reserved.
  *
  * OPC Foundation MIT License 1.00
- *
+ * 
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
  * files (the "Software"), to deal in the Software without
@@ -11,7 +11,7 @@
  * copies of the Software, and to permit persons to whom the
  * Software is furnished to do so, subject to the following
  * conditions:
- *
+ * 
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
@@ -581,6 +581,16 @@ namespace Opc.Ua.MTConnect
         public const uint CuttingItemType_Measurements = 9948;
 
         /// <summary>
+        /// The identifier for the DataItemEnumDataType_Encoding_DefaultBinary Object.
+        /// </summary>
+        public const uint DataItemEnumDataType_Encoding_DefaultBinary = 10099;
+
+        /// <summary>
+        /// The identifier for the DataItemStatisticsDataType_Encoding_DefaultBinary Object.
+        /// </summary>
+        public const uint DataItemStatisticsDataType_Encoding_DefaultBinary = 10100;
+
+        /// <summary>
         /// The identifier for the DataItemEnumDataType_Encoding_DefaultXml Object.
         /// </summary>
         public const uint DataItemEnumDataType_Encoding_DefaultXml = 10088;
@@ -591,14 +601,14 @@ namespace Opc.Ua.MTConnect
         public const uint DataItemStatisticsDataType_Encoding_DefaultXml = 10089;
 
         /// <summary>
-        /// The identifier for the DataItemEnumDataType_Encoding_DefaultBinary Object.
+        /// The identifier for the DataItemEnumDataType_Encoding_DefaultJson Object.
         /// </summary>
-        public const uint DataItemEnumDataType_Encoding_DefaultBinary = 10099;
+        public const uint DataItemEnumDataType_Encoding_DefaultJson = 10200;
 
         /// <summary>
-        /// The identifier for the DataItemStatisticsDataType_Encoding_DefaultBinary Object.
+        /// The identifier for the DataItemStatisticsDataType_Encoding_DefaultJson Object.
         /// </summary>
-        public const uint DataItemStatisticsDataType_Encoding_DefaultBinary = 10100;
+        public const uint DataItemStatisticsDataType_Encoding_DefaultJson = 10201;
     }
     #endregion
 
@@ -671,9 +681,9 @@ namespace Opc.Ua.MTConnect
         public const uint AngleConditionType = 7432;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType ObjectType.
+        /// The identifier for the Angular_AccelerationConditionType ObjectType.
         /// </summary>
-        public const uint Angular-AccelerationConditionType = 7493;
+        public const uint Angular_AccelerationConditionType = 7493;
 
         /// <summary>
         /// The identifier for the Angular_VelocityConditionType ObjectType.
@@ -1321,59 +1331,59 @@ namespace Opc.Ua.MTConnect
         public const uint AngleConditionType_LimitState_LastTransition_Id = 7486;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_EnabledState_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_EnabledState_Id Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_EnabledState_Id = 7509;
+        public const uint Angular_AccelerationConditionType_EnabledState_Id = 7509;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_Quality_SourceTimestamp Variable.
+        /// The identifier for the Angular_AccelerationConditionType_Quality_SourceTimestamp Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_Quality_SourceTimestamp = 7518;
+        public const uint Angular_AccelerationConditionType_Quality_SourceTimestamp = 7518;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LastSeverity_SourceTimestamp Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LastSeverity_SourceTimestamp Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_LastSeverity_SourceTimestamp = 7520;
+        public const uint Angular_AccelerationConditionType_LastSeverity_SourceTimestamp = 7520;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_Comment_SourceTimestamp Variable.
+        /// The identifier for the Angular_AccelerationConditionType_Comment_SourceTimestamp Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_Comment_SourceTimestamp = 7522;
+        public const uint Angular_AccelerationConditionType_Comment_SourceTimestamp = 7522;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_AddComment_InputArguments Variable.
+        /// The identifier for the Angular_AccelerationConditionType_AddComment_InputArguments Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_AddComment_InputArguments = 7527;
+        public const uint Angular_AccelerationConditionType_AddComment_InputArguments = 7527;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_ConditionRefresh_InputArguments Variable.
+        /// The identifier for the Angular_AccelerationConditionType_ConditionRefresh_InputArguments Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_ConditionRefresh_InputArguments = 7529;
+        public const uint Angular_AccelerationConditionType_ConditionRefresh_InputArguments = 7529;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_ConditionRefresh2_InputArguments Variable.
+        /// The identifier for the Angular_AccelerationConditionType_ConditionRefresh2_InputArguments Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_ConditionRefresh2_InputArguments = 10125;
+        public const uint Angular_AccelerationConditionType_ConditionRefresh2_InputArguments = 10125;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_ActiveState_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_ActiveState_Id Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_ActiveState_Id = 7532;
+        public const uint Angular_AccelerationConditionType_ActiveState_Id = 7532;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LimitState_CurrentState Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LimitState_CurrentState Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_LimitState_CurrentState = 7541;
+        public const uint Angular_AccelerationConditionType_LimitState_CurrentState = 7541;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LimitState_CurrentState_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LimitState_CurrentState_Id Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_LimitState_CurrentState_Id = 7542;
+        public const uint Angular_AccelerationConditionType_LimitState_CurrentState_Id = 7542;
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LimitState_LastTransition_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LimitState_LastTransition_Id Variable.
         /// </summary>
-        public const uint Angular-AccelerationConditionType_LimitState_LastTransition_Id = 7547;
+        public const uint Angular_AccelerationConditionType_LimitState_LastTransition_Id = 7547;
 
         /// <summary>
         /// The identifier for the Angular_VelocityConditionType_EnabledState_Id Variable.
@@ -3851,26 +3861,6 @@ namespace Opc.Ua.MTConnect
         public const uint ToolLifeTypeEnum_EnumValues = 10083;
 
         /// <summary>
-        /// The identifier for the OpcUaMTConnect_XmlSchema Variable.
-        /// </summary>
-        public const uint OpcUaMTConnect_XmlSchema = 10090;
-
-        /// <summary>
-        /// The identifier for the OpcUaMTConnect_XmlSchema_NamespaceUri Variable.
-        /// </summary>
-        public const uint OpcUaMTConnect_XmlSchema_NamespaceUri = 10092;
-
-        /// <summary>
-        /// The identifier for the OpcUaMTConnect_XmlSchema_DataItemEnumDataType Variable.
-        /// </summary>
-        public const uint OpcUaMTConnect_XmlSchema_DataItemEnumDataType = 10093;
-
-        /// <summary>
-        /// The identifier for the OpcUaMTConnect_XmlSchema_DataItemStatisticsDataType Variable.
-        /// </summary>
-        public const uint OpcUaMTConnect_XmlSchema_DataItemStatisticsDataType = 10096;
-
-        /// <summary>
         /// The identifier for the OpcUaMTConnect_BinarySchema Variable.
         /// </summary>
         public const uint OpcUaMTConnect_BinarySchema = 10101;
@@ -3881,6 +3871,11 @@ namespace Opc.Ua.MTConnect
         public const uint OpcUaMTConnect_BinarySchema_NamespaceUri = 10103;
 
         /// <summary>
+        /// The identifier for the OpcUaMTConnect_BinarySchema_Deprecated Variable.
+        /// </summary>
+        public const uint OpcUaMTConnect_BinarySchema_Deprecated = 10202;
+
+        /// <summary>
         /// The identifier for the OpcUaMTConnect_BinarySchema_DataItemEnumDataType Variable.
         /// </summary>
         public const uint OpcUaMTConnect_BinarySchema_DataItemEnumDataType = 10104;
@@ -3889,6 +3884,31 @@ namespace Opc.Ua.MTConnect
         /// The identifier for the OpcUaMTConnect_BinarySchema_DataItemStatisticsDataType Variable.
         /// </summary>
         public const uint OpcUaMTConnect_BinarySchema_DataItemStatisticsDataType = 10107;
+
+        /// <summary>
+        /// The identifier for the OpcUaMTConnect_XmlSchema Variable.
+        /// </summary>
+        public const uint OpcUaMTConnect_XmlSchema = 10090;
+
+        /// <summary>
+        /// The identifier for the OpcUaMTConnect_XmlSchema_NamespaceUri Variable.
+        /// </summary>
+        public const uint OpcUaMTConnect_XmlSchema_NamespaceUri = 10092;
+
+        /// <summary>
+        /// The identifier for the OpcUaMTConnect_XmlSchema_Deprecated Variable.
+        /// </summary>
+        public const uint OpcUaMTConnect_XmlSchema_Deprecated = 10204;
+
+        /// <summary>
+        /// The identifier for the OpcUaMTConnect_XmlSchema_DataItemEnumDataType Variable.
+        /// </summary>
+        public const uint OpcUaMTConnect_XmlSchema_DataItemEnumDataType = 10093;
+
+        /// <summary>
+        /// The identifier for the OpcUaMTConnect_XmlSchema_DataItemStatisticsDataType Variable.
+        /// </summary>
+        public const uint OpcUaMTConnect_XmlSchema_DataItemStatisticsDataType = 10096;
     }
     #endregion
 
@@ -4806,6 +4826,16 @@ namespace Opc.Ua.MTConnect
         public static readonly ExpandedNodeId CuttingItemType_Measurements = new ExpandedNodeId(Opc.Ua.MTConnect.Objects.CuttingItemType_Measurements, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
+        /// The identifier for the DataItemEnumDataType_Encoding_DefaultBinary Object.
+        /// </summary>
+        public static readonly ExpandedNodeId DataItemEnumDataType_Encoding_DefaultBinary = new ExpandedNodeId(Opc.Ua.MTConnect.Objects.DataItemEnumDataType_Encoding_DefaultBinary, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+
+        /// <summary>
+        /// The identifier for the DataItemStatisticsDataType_Encoding_DefaultBinary Object.
+        /// </summary>
+        public static readonly ExpandedNodeId DataItemStatisticsDataType_Encoding_DefaultBinary = new ExpandedNodeId(Opc.Ua.MTConnect.Objects.DataItemStatisticsDataType_Encoding_DefaultBinary, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+
+        /// <summary>
         /// The identifier for the DataItemEnumDataType_Encoding_DefaultXml Object.
         /// </summary>
         public static readonly ExpandedNodeId DataItemEnumDataType_Encoding_DefaultXml = new ExpandedNodeId(Opc.Ua.MTConnect.Objects.DataItemEnumDataType_Encoding_DefaultXml, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
@@ -4816,14 +4846,14 @@ namespace Opc.Ua.MTConnect
         public static readonly ExpandedNodeId DataItemStatisticsDataType_Encoding_DefaultXml = new ExpandedNodeId(Opc.Ua.MTConnect.Objects.DataItemStatisticsDataType_Encoding_DefaultXml, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the DataItemEnumDataType_Encoding_DefaultBinary Object.
+        /// The identifier for the DataItemEnumDataType_Encoding_DefaultJson Object.
         /// </summary>
-        public static readonly ExpandedNodeId DataItemEnumDataType_Encoding_DefaultBinary = new ExpandedNodeId(Opc.Ua.MTConnect.Objects.DataItemEnumDataType_Encoding_DefaultBinary, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId DataItemEnumDataType_Encoding_DefaultJson = new ExpandedNodeId(Opc.Ua.MTConnect.Objects.DataItemEnumDataType_Encoding_DefaultJson, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the DataItemStatisticsDataType_Encoding_DefaultBinary Object.
+        /// The identifier for the DataItemStatisticsDataType_Encoding_DefaultJson Object.
         /// </summary>
-        public static readonly ExpandedNodeId DataItemStatisticsDataType_Encoding_DefaultBinary = new ExpandedNodeId(Opc.Ua.MTConnect.Objects.DataItemStatisticsDataType_Encoding_DefaultBinary, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId DataItemStatisticsDataType_Encoding_DefaultJson = new ExpandedNodeId(Opc.Ua.MTConnect.Objects.DataItemStatisticsDataType_Encoding_DefaultJson, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
     }
     #endregion
 
@@ -4896,9 +4926,9 @@ namespace Opc.Ua.MTConnect
         public static readonly ExpandedNodeId AngleConditionType = new ExpandedNodeId(Opc.Ua.MTConnect.ObjectTypes.AngleConditionType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType ObjectType.
+        /// The identifier for the Angular_AccelerationConditionType ObjectType.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType = new ExpandedNodeId(Opc.Ua.MTConnect.ObjectTypes.Angular-AccelerationConditionType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType = new ExpandedNodeId(Opc.Ua.MTConnect.ObjectTypes.Angular_AccelerationConditionType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
         /// The identifier for the Angular_VelocityConditionType ObjectType.
@@ -5546,59 +5576,59 @@ namespace Opc.Ua.MTConnect
         public static readonly ExpandedNodeId AngleConditionType_LimitState_LastTransition_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.AngleConditionType_LimitState_LastTransition_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_EnabledState_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_EnabledState_Id Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_EnabledState_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_EnabledState_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_EnabledState_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_EnabledState_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_Quality_SourceTimestamp Variable.
+        /// The identifier for the Angular_AccelerationConditionType_Quality_SourceTimestamp Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_Quality_SourceTimestamp = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_Quality_SourceTimestamp, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_Quality_SourceTimestamp = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_Quality_SourceTimestamp, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LastSeverity_SourceTimestamp Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LastSeverity_SourceTimestamp Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_LastSeverity_SourceTimestamp = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_LastSeverity_SourceTimestamp, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_LastSeverity_SourceTimestamp = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_LastSeverity_SourceTimestamp, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_Comment_SourceTimestamp Variable.
+        /// The identifier for the Angular_AccelerationConditionType_Comment_SourceTimestamp Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_Comment_SourceTimestamp = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_Comment_SourceTimestamp, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_Comment_SourceTimestamp = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_Comment_SourceTimestamp, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_AddComment_InputArguments Variable.
+        /// The identifier for the Angular_AccelerationConditionType_AddComment_InputArguments Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_AddComment_InputArguments = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_AddComment_InputArguments, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_AddComment_InputArguments = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_AddComment_InputArguments, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_ConditionRefresh_InputArguments Variable.
+        /// The identifier for the Angular_AccelerationConditionType_ConditionRefresh_InputArguments Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_ConditionRefresh_InputArguments = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_ConditionRefresh_InputArguments, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_ConditionRefresh_InputArguments = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_ConditionRefresh_InputArguments, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_ConditionRefresh2_InputArguments Variable.
+        /// The identifier for the Angular_AccelerationConditionType_ConditionRefresh2_InputArguments Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_ConditionRefresh2_InputArguments = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_ConditionRefresh2_InputArguments, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_ConditionRefresh2_InputArguments = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_ConditionRefresh2_InputArguments, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_ActiveState_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_ActiveState_Id Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_ActiveState_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_ActiveState_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_ActiveState_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_ActiveState_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LimitState_CurrentState Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LimitState_CurrentState Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_LimitState_CurrentState = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_LimitState_CurrentState, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_LimitState_CurrentState = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_LimitState_CurrentState, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LimitState_CurrentState_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LimitState_CurrentState_Id Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_LimitState_CurrentState_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_LimitState_CurrentState_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_LimitState_CurrentState_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_LimitState_CurrentState_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the Angular-AccelerationConditionType_LimitState_LastTransition_Id Variable.
+        /// The identifier for the Angular_AccelerationConditionType_LimitState_LastTransition_Id Variable.
         /// </summary>
-        public static readonly ExpandedNodeId Angular-AccelerationConditionType_LimitState_LastTransition_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular-AccelerationConditionType_LimitState_LastTransition_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+        public static readonly ExpandedNodeId Angular_AccelerationConditionType_LimitState_LastTransition_Id = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.Angular_AccelerationConditionType_LimitState_LastTransition_Id, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
         /// The identifier for the Angular_VelocityConditionType_EnabledState_Id Variable.
@@ -8076,26 +8106,6 @@ namespace Opc.Ua.MTConnect
         public static readonly ExpandedNodeId ToolLifeTypeEnum_EnumValues = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.ToolLifeTypeEnum_EnumValues, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
-        /// The identifier for the OpcUaMTConnect_XmlSchema Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OpcUaMTConnect_XmlSchema = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_XmlSchema, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
-
-        /// <summary>
-        /// The identifier for the OpcUaMTConnect_XmlSchema_NamespaceUri Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OpcUaMTConnect_XmlSchema_NamespaceUri = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_XmlSchema_NamespaceUri, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
-
-        /// <summary>
-        /// The identifier for the OpcUaMTConnect_XmlSchema_DataItemEnumDataType Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OpcUaMTConnect_XmlSchema_DataItemEnumDataType = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_XmlSchema_DataItemEnumDataType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
-
-        /// <summary>
-        /// The identifier for the OpcUaMTConnect_XmlSchema_DataItemStatisticsDataType Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OpcUaMTConnect_XmlSchema_DataItemStatisticsDataType = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_XmlSchema_DataItemStatisticsDataType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
-
-        /// <summary>
         /// The identifier for the OpcUaMTConnect_BinarySchema Variable.
         /// </summary>
         public static readonly ExpandedNodeId OpcUaMTConnect_BinarySchema = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_BinarySchema, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
@@ -8106,6 +8116,11 @@ namespace Opc.Ua.MTConnect
         public static readonly ExpandedNodeId OpcUaMTConnect_BinarySchema_NamespaceUri = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_BinarySchema_NamespaceUri, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
 
         /// <summary>
+        /// The identifier for the OpcUaMTConnect_BinarySchema_Deprecated Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OpcUaMTConnect_BinarySchema_Deprecated = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_BinarySchema_Deprecated, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+
+        /// <summary>
         /// The identifier for the OpcUaMTConnect_BinarySchema_DataItemEnumDataType Variable.
         /// </summary>
         public static readonly ExpandedNodeId OpcUaMTConnect_BinarySchema_DataItemEnumDataType = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_BinarySchema_DataItemEnumDataType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
@@ -8114,6 +8129,31 @@ namespace Opc.Ua.MTConnect
         /// The identifier for the OpcUaMTConnect_BinarySchema_DataItemStatisticsDataType Variable.
         /// </summary>
         public static readonly ExpandedNodeId OpcUaMTConnect_BinarySchema_DataItemStatisticsDataType = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_BinarySchema_DataItemStatisticsDataType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+
+        /// <summary>
+        /// The identifier for the OpcUaMTConnect_XmlSchema Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OpcUaMTConnect_XmlSchema = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_XmlSchema, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+
+        /// <summary>
+        /// The identifier for the OpcUaMTConnect_XmlSchema_NamespaceUri Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OpcUaMTConnect_XmlSchema_NamespaceUri = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_XmlSchema_NamespaceUri, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+
+        /// <summary>
+        /// The identifier for the OpcUaMTConnect_XmlSchema_Deprecated Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OpcUaMTConnect_XmlSchema_Deprecated = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_XmlSchema_Deprecated, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+
+        /// <summary>
+        /// The identifier for the OpcUaMTConnect_XmlSchema_DataItemEnumDataType Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OpcUaMTConnect_XmlSchema_DataItemEnumDataType = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_XmlSchema_DataItemEnumDataType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
+
+        /// <summary>
+        /// The identifier for the OpcUaMTConnect_XmlSchema_DataItemStatisticsDataType Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OpcUaMTConnect_XmlSchema_DataItemStatisticsDataType = new ExpandedNodeId(Opc.Ua.MTConnect.Variables.OpcUaMTConnect_XmlSchema_DataItemStatisticsDataType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect);
     }
     #endregion
 
@@ -8560,14 +8600,14 @@ namespace Opc.Ua.MTConnect
         public const string AngleType = "AngleType";
 
         /// <summary>
+        /// The BrowseName for the Angular_AccelerationConditionType component.
+        /// </summary>
+        public const string Angular_AccelerationConditionType = "Angular_AccelerationConditionType";
+
+        /// <summary>
         /// The BrowseName for the Angular_VelocityConditionType component.
         /// </summary>
         public const string Angular_VelocityConditionType = "Angular_VelocityConditionType";
-
-        /// <summary>
-        /// The BrowseName for the Angular-AccelerationConditionType component.
-        /// </summary>
-        public const string Angular-AccelerationConditionType = "Angular-AccelerationConditionType";
 
         /// <summary>
         /// The BrowseName for the AngularAccelerationType component.

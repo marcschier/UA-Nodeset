@@ -1,8 +1,8 @@
 /* ========================================================================
- * Copyright (c) 2005-2016 The OPC Foundation, Inc. All rights reserved.
+ * Copyright (c) 2005-2018 The OPC Foundation, Inc. All rights reserved.
  *
  * OPC Foundation MIT License 1.00
- *
+ * 
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
  * files (the "Software"), to deal in the Software without
@@ -11,7 +11,7 @@
  * copies of the Software, and to permit persons to whom the
  * Software is furnished to do so, subject to the following
  * conditions:
- *
+ * 
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
@@ -2667,20 +2667,20 @@ namespace Opc.Ua.Di
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -2691,9 +2691,9 @@ namespace Opc.Ua.Di
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     ref transferID,
                     ref initTransferStatus);
             }
@@ -2714,9 +2714,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult TransferToDeviceMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ref int transferID,
         ref int initTransferStatus);
     #endif
@@ -2792,20 +2792,20 @@ namespace Opc.Ua.Di
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -2816,9 +2816,9 @@ namespace Opc.Ua.Di
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     ref transferID,
                     ref initTransferStatus);
             }
@@ -2839,9 +2839,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult TransferFromDeviceMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ref int transferID,
         ref int initTransferStatus);
     #endif
@@ -2920,20 +2920,20 @@ namespace Opc.Ua.Di
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -2948,9 +2948,9 @@ namespace Opc.Ua.Di
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     transferID,
                     sequenceNumber,
                     maxParameterResultsToReturn,
@@ -2973,9 +2973,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult FetchTransferResultDataMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         int transferID,
         int sequenceNumber,
         int maxParameterResultsToReturn,
@@ -3321,20 +3321,20 @@ namespace Opc.Ua.Di
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -3346,9 +3346,9 @@ namespace Opc.Ua.Di
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     currentContext,
                     ref initLockStatus);
             }
@@ -3368,9 +3368,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult InitLockMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         string currentContext,
         ref int initLockStatus);
     #endif
@@ -3445,20 +3445,20 @@ namespace Opc.Ua.Di
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -3468,9 +3468,9 @@ namespace Opc.Ua.Di
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     ref renewLockStatus);
             }
 
@@ -3489,9 +3489,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult RenewLockMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ref int renewLockStatus);
     #endif
     #endregion
@@ -3565,20 +3565,20 @@ namespace Opc.Ua.Di
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -3588,9 +3588,9 @@ namespace Opc.Ua.Di
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     ref exitLockStatus);
             }
 
@@ -3609,9 +3609,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult ExitLockMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ref int exitLockStatus);
     #endif
     #endregion
@@ -3685,20 +3685,20 @@ namespace Opc.Ua.Di
         /// <summary>
         /// Invokes the method, returns the result and output argument.
         /// </summary>
-        /// <param name="context">The current context.</param>
-        /// <param name="objectId">The id of the object.</param>
+        /// <param name="_context">The current context.</param>
+        /// <param name="_objectId">The id of the object.</param>
         /// <param name="inputArguments">The input arguments which have been already validated.</param>
         /// <param name="outputArguments">The output arguments which have initialized with thier default values.</param>
         /// <returns></returns>
         protected override ServiceResult Call(
-            ISystemContext context,
-            NodeId objectId,
+            ISystemContext _context,
+            NodeId _objectId,
             IList<object> inputArguments,
             IList<object> outputArguments)
         {
             if (OnCall == null)
             {
-                return base.Call(context, objectId, inputArguments, outputArguments);
+                return base.Call(_context, _objectId, inputArguments, outputArguments);
             }
 
             ServiceResult result = null;
@@ -3708,9 +3708,9 @@ namespace Opc.Ua.Di
             if (OnCall != null)
             {
                 result = OnCall(
-                    context,
+                    _context,
                     this,
-                    objectId,
+                    _objectId,
                     ref breakLockStatus);
             }
 
@@ -3729,9 +3729,9 @@ namespace Opc.Ua.Di
     /// </summary>
     /// <exclude />
     public delegate ServiceResult BreakLockMethodStateMethodCallHandler(
-        ISystemContext context,
-        MethodState method,
-        NodeId objectId,
+        ISystemContext _context,
+        MethodState _method,
+        NodeId _objectId,
         ref int breakLockStatus);
     #endif
     #endregion

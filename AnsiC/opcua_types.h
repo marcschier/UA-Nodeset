@@ -1,8 +1,8 @@
 /* ========================================================================
- * Copyright (c) 2005-2016 The OPC Foundation, Inc. All rights reserved.
+ * Copyright (c) 2005-2018 The OPC Foundation, Inc. All rights reserved.
  *
  * OPC Foundation MIT License 1.00
- *
+ * 
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
  * files (the "Software"), to deal in the Software without
@@ -11,7 +11,7 @@
  * copies of the Software, and to permit persons to whom the
  * Software is furnished to do so, subject to the following
  * conditions:
- *
+ * 
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
@@ -128,6 +128,84 @@ OpcUa_PermissionType;
 OPCUA_IMEXPORT extern struct _OpcUa_EnumeratedType OpcUa_PermissionType_EnumeratedType;
 #endif
 
+#ifndef OPCUA_EXCLUDE_AccessLevelType
+/*============================================================================
+ * The AccessLevelType enumeration.
+ *===========================================================================*/
+typedef enum _OpcUa_AccessLevelType
+{
+    OpcUa_AccessLevelType_None           = 0,
+    OpcUa_AccessLevelType_CurrentRead    = 1,
+    OpcUa_AccessLevelType_CurrentWrite   = 2,
+    OpcUa_AccessLevelType_HistoryRead    = 4,
+    OpcUa_AccessLevelType_HistoryWrite   = 16,
+    OpcUa_AccessLevelType_StatusWrite    = 32,
+    OpcUa_AccessLevelType_TimestampWrite = 64
+#if OPCUA_FORCE_INT32_ENUMS
+    ,_OpcUa_AccessLevelType_MaxEnumerationValue = OpcUa_Int32_Max
+#endif
+}
+OpcUa_AccessLevelType;
+
+#define OpcUa_AccessLevelType_Clear(xValue) OpcUa_EnumeratedType_Clear(xValue, OpcUa_AccessLevelType_None)
+
+#define OpcUa_AccessLevelType_Initialize(xValue) OpcUa_EnumeratedType_Initialize(xValue, OpcUa_AccessLevelType_None)
+
+OPCUA_IMEXPORT extern struct _OpcUa_EnumeratedType OpcUa_AccessLevelType_EnumeratedType;
+#endif
+
+#ifndef OPCUA_EXCLUDE_AccessLevelExType
+/*============================================================================
+ * The AccessLevelExType enumeration.
+ *===========================================================================*/
+typedef enum _OpcUa_AccessLevelExType
+{
+    OpcUa_AccessLevelExType_None               = 0,
+    OpcUa_AccessLevelExType_CurrentRead        = 1,
+    OpcUa_AccessLevelExType_CurrentWrite       = 2,
+    OpcUa_AccessLevelExType_HistoryRead        = 4,
+    OpcUa_AccessLevelExType_HistoryWrite       = 16,
+    OpcUa_AccessLevelExType_StatusWrite        = 32,
+    OpcUa_AccessLevelExType_TimestampWrite     = 64,
+    OpcUa_AccessLevelExType_NonatomicRead      = 65536,
+    OpcUa_AccessLevelExType_NonatomicWrite     = 131072,
+    OpcUa_AccessLevelExType_WriteFullArrayOnly = 262144
+#if OPCUA_FORCE_INT32_ENUMS
+    ,_OpcUa_AccessLevelExType_MaxEnumerationValue = OpcUa_Int32_Max
+#endif
+}
+OpcUa_AccessLevelExType;
+
+#define OpcUa_AccessLevelExType_Clear(xValue) OpcUa_EnumeratedType_Clear(xValue, OpcUa_AccessLevelExType_None)
+
+#define OpcUa_AccessLevelExType_Initialize(xValue) OpcUa_EnumeratedType_Initialize(xValue, OpcUa_AccessLevelExType_None)
+
+OPCUA_IMEXPORT extern struct _OpcUa_EnumeratedType OpcUa_AccessLevelExType_EnumeratedType;
+#endif
+
+#ifndef OPCUA_EXCLUDE_EventNotifierType
+/*============================================================================
+ * The EventNotifierType enumeration.
+ *===========================================================================*/
+typedef enum _OpcUa_EventNotifierType
+{
+    OpcUa_EventNotifierType_None              = 0,
+    OpcUa_EventNotifierType_SubscribeToEvents = 1,
+    OpcUa_EventNotifierType_HistoryRead       = 4,
+    OpcUa_EventNotifierType_HistoryWrite      = 8
+#if OPCUA_FORCE_INT32_ENUMS
+    ,_OpcUa_EventNotifierType_MaxEnumerationValue = OpcUa_Int32_Max
+#endif
+}
+OpcUa_EventNotifierType;
+
+#define OpcUa_EventNotifierType_Clear(xValue) OpcUa_EnumeratedType_Clear(xValue, OpcUa_EventNotifierType_None)
+
+#define OpcUa_EventNotifierType_Initialize(xValue) OpcUa_EnumeratedType_Initialize(xValue, OpcUa_EventNotifierType_None)
+
+OPCUA_IMEXPORT extern struct _OpcUa_EnumeratedType OpcUa_EventNotifierType_EnumeratedType;
+#endif
+
 #ifndef OPCUA_EXCLUDE_AccessRestrictionType
 /*============================================================================
  * The AccessRestrictionType enumeration.
@@ -207,6 +285,9 @@ typedef struct _OpcUa_StructureField
     OpcUa_LocalizedText Description;
     OpcUa_NodeId        DataType;
     OpcUa_Int32         ValueRank;
+    OpcUa_Int32         NoOfArrayDimensions;
+    OpcUa_UInt32*       ArrayDimensions;
+    OpcUa_UInt32        MaxStringLength;
     OpcUa_Boolean       IsOptional;
 }
 OpcUa_StructureField;
@@ -984,11 +1065,42 @@ OPCUA_EXPORT OpcUa_StatusCode OpcUa_ServiceFault_Decode(OpcUa_ServiceFault* pVal
 OPCUA_IMEXPORT extern struct _OpcUa_EncodeableType OpcUa_ServiceFault_EncodeableType;
 #endif
 
-#ifndef OPCUA_EXCLUDE_SessionLessServiceMessageType
+#ifndef OPCUA_EXCLUDE_SessionlessInvokeRequestType
 /*============================================================================
- * The SessionLessServiceMessageType structure.
+ * The SessionlessInvokeRequestType structure.
  *===========================================================================*/
-typedef struct _OpcUa_SessionLessServiceMessageType
+typedef struct _OpcUa_SessionlessInvokeRequestType
+{
+    OpcUa_Int32   NoOfUrisVersion;
+    OpcUa_UInt32* UrisVersion;
+    OpcUa_Int32   NoOfNamespaceUris;
+    OpcUa_String* NamespaceUris;
+    OpcUa_Int32   NoOfServerUris;
+    OpcUa_String* ServerUris;
+    OpcUa_Int32   NoOfLocaleIds;
+    OpcUa_String* LocaleIds;
+    OpcUa_UInt32  ServiceId;
+}
+OpcUa_SessionlessInvokeRequestType;
+
+OPCUA_EXPORT OpcUa_Void OpcUa_SessionlessInvokeRequestType_Initialize(OpcUa_SessionlessInvokeRequestType* pValue);
+
+OPCUA_EXPORT OpcUa_Void OpcUa_SessionlessInvokeRequestType_Clear(OpcUa_SessionlessInvokeRequestType* pValue);
+
+OPCUA_EXPORT OpcUa_StatusCode OpcUa_SessionlessInvokeRequestType_GetSize(OpcUa_SessionlessInvokeRequestType* pValue, struct _OpcUa_Encoder* pEncoder, OpcUa_Int32* pSize);
+
+OPCUA_EXPORT OpcUa_StatusCode OpcUa_SessionlessInvokeRequestType_Encode(OpcUa_SessionlessInvokeRequestType* pValue, struct _OpcUa_Encoder* pEncoder);
+
+OPCUA_EXPORT OpcUa_StatusCode OpcUa_SessionlessInvokeRequestType_Decode(OpcUa_SessionlessInvokeRequestType* pValue, struct _OpcUa_Decoder* pDecoder);
+
+OPCUA_IMEXPORT extern struct _OpcUa_EncodeableType OpcUa_SessionlessInvokeRequestType_EncodeableType;
+#endif
+
+#ifndef OPCUA_EXCLUDE_SessionlessInvokeResponseType
+/*============================================================================
+ * The SessionlessInvokeResponseType structure.
+ *===========================================================================*/
+typedef struct _OpcUa_SessionlessInvokeResponseType
 {
     OpcUa_Int32   NoOfNamespaceUris;
     OpcUa_String* NamespaceUris;
@@ -996,19 +1108,19 @@ typedef struct _OpcUa_SessionLessServiceMessageType
     OpcUa_String* ServerUris;
     OpcUa_UInt32  ServiceId;
 }
-OpcUa_SessionLessServiceMessageType;
+OpcUa_SessionlessInvokeResponseType;
 
-OPCUA_EXPORT OpcUa_Void OpcUa_SessionLessServiceMessageType_Initialize(OpcUa_SessionLessServiceMessageType* pValue);
+OPCUA_EXPORT OpcUa_Void OpcUa_SessionlessInvokeResponseType_Initialize(OpcUa_SessionlessInvokeResponseType* pValue);
 
-OPCUA_EXPORT OpcUa_Void OpcUa_SessionLessServiceMessageType_Clear(OpcUa_SessionLessServiceMessageType* pValue);
+OPCUA_EXPORT OpcUa_Void OpcUa_SessionlessInvokeResponseType_Clear(OpcUa_SessionlessInvokeResponseType* pValue);
 
-OPCUA_EXPORT OpcUa_StatusCode OpcUa_SessionLessServiceMessageType_GetSize(OpcUa_SessionLessServiceMessageType* pValue, struct _OpcUa_Encoder* pEncoder, OpcUa_Int32* pSize);
+OPCUA_EXPORT OpcUa_StatusCode OpcUa_SessionlessInvokeResponseType_GetSize(OpcUa_SessionlessInvokeResponseType* pValue, struct _OpcUa_Encoder* pEncoder, OpcUa_Int32* pSize);
 
-OPCUA_EXPORT OpcUa_StatusCode OpcUa_SessionLessServiceMessageType_Encode(OpcUa_SessionLessServiceMessageType* pValue, struct _OpcUa_Encoder* pEncoder);
+OPCUA_EXPORT OpcUa_StatusCode OpcUa_SessionlessInvokeResponseType_Encode(OpcUa_SessionlessInvokeResponseType* pValue, struct _OpcUa_Encoder* pEncoder);
 
-OPCUA_EXPORT OpcUa_StatusCode OpcUa_SessionLessServiceMessageType_Decode(OpcUa_SessionLessServiceMessageType* pValue, struct _OpcUa_Decoder* pDecoder);
+OPCUA_EXPORT OpcUa_StatusCode OpcUa_SessionlessInvokeResponseType_Decode(OpcUa_SessionlessInvokeResponseType* pValue, struct _OpcUa_Decoder* pDecoder);
 
-OPCUA_IMEXPORT extern struct _OpcUa_EncodeableType OpcUa_SessionLessServiceMessageType_EncodeableType;
+OPCUA_IMEXPORT extern struct _OpcUa_EncodeableType OpcUa_SessionlessInvokeResponseType_EncodeableType;
 #endif
 
 #ifndef OPCUA_EXCLUDE_FindServers
@@ -6726,6 +6838,44 @@ OPCUA_EXPORT OpcUa_StatusCode OpcUa_ProgramDiagnosticDataType_Encode(OpcUa_Progr
 OPCUA_EXPORT OpcUa_StatusCode OpcUa_ProgramDiagnosticDataType_Decode(OpcUa_ProgramDiagnosticDataType* pValue, struct _OpcUa_Decoder* pDecoder);
 
 OPCUA_IMEXPORT extern struct _OpcUa_EncodeableType OpcUa_ProgramDiagnosticDataType_EncodeableType;
+#endif
+
+#ifndef OPCUA_EXCLUDE_ProgramDiagnostic2DataType
+/*============================================================================
+ * The ProgramDiagnostic2DataType structure.
+ *===========================================================================*/
+typedef struct _OpcUa_ProgramDiagnostic2DataType
+{
+    OpcUa_NodeId       CreateSessionId;
+    OpcUa_String       CreateClientName;
+    OpcUa_DateTime     InvocationCreationTime;
+    OpcUa_DateTime     LastTransitionTime;
+    OpcUa_String       LastMethodCall;
+    OpcUa_NodeId       LastMethodSessionId;
+    OpcUa_Int32        NoOfLastMethodInputArguments;
+    OpcUa_Argument*    LastMethodInputArguments;
+    OpcUa_Int32        NoOfLastMethodOutputArguments;
+    OpcUa_Argument*    LastMethodOutputArguments;
+    OpcUa_Int32        NoOfLastMethodInputValues;
+    OpcUa_Variant*     LastMethodInputValues;
+    OpcUa_Int32        NoOfLastMethodOutputValues;
+    OpcUa_Variant*     LastMethodOutputValues;
+    OpcUa_DateTime     LastMethodCallTime;
+    OpcUa_StatusResult LastMethodReturnStatus;
+}
+OpcUa_ProgramDiagnostic2DataType;
+
+OPCUA_EXPORT OpcUa_Void OpcUa_ProgramDiagnostic2DataType_Initialize(OpcUa_ProgramDiagnostic2DataType* pValue);
+
+OPCUA_EXPORT OpcUa_Void OpcUa_ProgramDiagnostic2DataType_Clear(OpcUa_ProgramDiagnostic2DataType* pValue);
+
+OPCUA_EXPORT OpcUa_StatusCode OpcUa_ProgramDiagnostic2DataType_GetSize(OpcUa_ProgramDiagnostic2DataType* pValue, struct _OpcUa_Encoder* pEncoder, OpcUa_Int32* pSize);
+
+OPCUA_EXPORT OpcUa_StatusCode OpcUa_ProgramDiagnostic2DataType_Encode(OpcUa_ProgramDiagnostic2DataType* pValue, struct _OpcUa_Encoder* pEncoder);
+
+OPCUA_EXPORT OpcUa_StatusCode OpcUa_ProgramDiagnostic2DataType_Decode(OpcUa_ProgramDiagnostic2DataType* pValue, struct _OpcUa_Decoder* pDecoder);
+
+OPCUA_IMEXPORT extern struct _OpcUa_EncodeableType OpcUa_ProgramDiagnostic2DataType_EncodeableType;
 #endif
 
 #ifndef OPCUA_EXCLUDE_Annotation

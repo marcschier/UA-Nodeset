@@ -1,8 +1,8 @@
 /* ========================================================================
- * Copyright (c) 2005-2016 The OPC Foundation, Inc. All rights reserved.
+ * Copyright (c) 2005-2018 The OPC Foundation, Inc. All rights reserved.
  *
  * OPC Foundation MIT License 1.00
- *
+ * 
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
  * files (the "Software"), to deal in the Software without
@@ -11,7 +11,7 @@
  * copies of the Software, and to permit persons to whom the
  * Software is furnished to do so, subject to the following
  * conditions:
- *
+ * 
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
@@ -88,7 +88,7 @@
 /* #define OPCUA_EXCLUDE_StructureDescription */
 /* #define OPCUA_EXCLUDE_EnumDescription */
 /* #define OPCUA_EXCLUDE_PublishedVariableDataType */
-/* #define OPCUA_EXCLUDE_DataConnectionDataType */
+/* #define OPCUA_EXCLUDE_FieldTargetDataType */
 /* #define OPCUA_EXCLUDE_RolePermissionType */
 /* #define OPCUA_EXCLUDE_DataTypeDefinition */
 /* #define OPCUA_EXCLUDE_StructureField */
@@ -116,7 +116,8 @@
 /* #define OPCUA_EXCLUDE_RequestHeader */
 /* #define OPCUA_EXCLUDE_ResponseHeader */
 /* #define OPCUA_EXCLUDE_ServiceFault */
-/* #define OPCUA_EXCLUDE_SessionLessServiceMessageType */
+/* #define OPCUA_EXCLUDE_SessionlessInvokeRequestType */
+/* #define OPCUA_EXCLUDE_SessionlessInvokeResponseType */
 /* #define OPCUA_EXCLUDE_ServerOnNetwork */
 /* #define OPCUA_EXCLUDE_UserTokenPolicy */
 /* #define OPCUA_EXCLUDE_EndpointDescription */
@@ -238,6 +239,7 @@
 /* #define OPCUA_EXCLUDE_AxisInformation */
 /* #define OPCUA_EXCLUDE_XVType */
 /* #define OPCUA_EXCLUDE_ProgramDiagnosticDataType */
+/* #define OPCUA_EXCLUDE_ProgramDiagnostic2DataType */
 /* #define OPCUA_EXCLUDE_Annotation */
 
 #endif /* _OpcUa_Exclusions_H_ */

@@ -1,3 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * Copyright (c) 2005-2018 The OPC Foundation, Inc. All rights reserved.
+ *
+ * OPC Foundation MIT License 1.00
+ * 
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following
+ * conditions:
+ * 
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * The complete license agreement can be found here:
+ * http://opcfoundation.org/License/MIT/1.00/
+-->
+
 <xs:schema
   xmlns:xs="http://www.w3.org/2001/XMLSchema"
   xmlns:ua="http://opcfoundation.org/UA/2008/02/Types.xsd"
@@ -487,7 +517,7 @@
 
   <xs:element name="ImagePNG" type="xs:base64Binary" />
 
-  <xs:element name="AudioData" type="xs:base64Binary" />
+  <xs:element name="AudioDataType" type="xs:base64Binary" />
 
   <xs:element name="BitFieldMaskDataType" type="xs:unsignedLong" />
 
@@ -647,6 +677,7 @@
       <xs:element name="DataType" type="ua:NodeId" minOccurs="0" nillable="true" />
       <xs:element name="ValueRank" type="xs:int" minOccurs="0" />
       <xs:element name="ArrayDimensions" type="ua:ListOfUInt32" minOccurs="0" nillable="true" />
+      <xs:element name="MaxStringLength" type="xs:unsignedInt" minOccurs="0" />
       <xs:element name="DataSetFieldId" type="ua:Guid" minOccurs="0" />
       <xs:element name="Properties" type="tns:ListOfKeyValuePair" minOccurs="0" nillable="true" />
     </xs:sequence>
@@ -711,38 +742,43 @@
   </xs:complexType>
   <xs:element name="ListOfEnumDescription" type="tns:ListOfEnumDescription" nillable="true"></xs:element>
 
-  <xs:simpleType  name="DataSetContentMask">
+  <xs:simpleType  name="DataSetMessageContentMask">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="FieldStatusCode_1" />
-      <xs:enumeration value="FieldSourceTimestamp_2" />
-      <xs:enumeration value="FieldServerTimestamp_4" />
-      <xs:enumeration value="FieldSourcePicoSeconds_8" />
-      <xs:enumeration value="FieldServerPicoSeconds_16" />
-      <xs:enumeration value="FieldRawDataEncoding_32" />
-      <xs:enumeration value="HeaderTimestamp_64" />
-      <xs:enumeration value="HeaderPicoSeconds_128" />
-      <xs:enumeration value="HeaderStatusCode_256" />
-      <xs:enumeration value="HeaderMajorVersion_512" />
-      <xs:enumeration value="HeaderMinorVersion_1024" />
+      <xs:element name="FieldStatusCode" type="ua:Variant" minOccurs="0" />
+      <xs:element name="FieldSourceTimestamp" type="ua:Variant" minOccurs="0" />
+      <xs:element name="FieldServerTimestamp" type="ua:Variant" minOccurs="0" />
+      <xs:element name="FieldSourcePicoSeconds" type="ua:Variant" minOccurs="0" />
+      <xs:element name="FieldServerPicoSeconds" type="ua:Variant" minOccurs="0" />
+      <xs:element name="FieldRawDataEncoding" type="ua:Variant" minOccurs="0" />
+      <xs:element name="HeaderTimestamp" type="ua:Variant" minOccurs="0" />
+      <xs:element name="HeaderPicoSeconds" type="ua:Variant" minOccurs="0" />
+      <xs:element name="HeaderStatusCode" type="ua:Variant" minOccurs="0" />
+      <xs:element name="HeaderMajorVersion" type="ua:Variant" minOccurs="0" />
+      <xs:element name="HeaderMinorVersion" type="ua:Variant" minOccurs="0" />
     </xs:restriction>
   </xs:simpleType>
-  <xs:element name="DataSetContentMask" type="tns:DataSetContentMask" />
+  <xs:element name="DataSetMessageContentMask" type="tns:DataSetMessageContentMask" />
 
-  <xs:complexType name="ListOfDataSetContentMask">
+  <xs:complexType name="ListOfDataSetMessageContentMask">
     <xs:sequence>
-      <xs:element name="DataSetContentMask" type="tns:DataSetContentMask" minOccurs="0" maxOccurs="unbounded" />
+      <xs:element name="DataSetMessageContentMask" type="tns:DataSetMessageContentMask" minOccurs="0" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ListOfDataSetContentMask" type="tns:ListOfDataSetContentMask" nillable="true"></xs:element>
+  <xs:element name="ListOfDataSetMessageContentMask" type="tns:ListOfDataSetMessageContentMask" nillable="true"></xs:element>
 
   <xs:simpleType  name="NetworkMessageContentMask">
     <xs:restriction base="xs:string">
-      <xs:enumeration value="PublisherId_1" />
-      <xs:enumeration value="DataSetWriterId_2" />
-      <xs:enumeration value="Timestamp_4" />
-      <xs:enumeration value="Picoseconds_8" />
-      <xs:enumeration value="DataSetClassId_16" />
-      <xs:enumeration value="PromotedFields_32" />
+      <xs:element name="PublisherId" type="ua:Variant" minOccurs="0" />
+      <xs:element name="GroupHeader" type="ua:Variant" minOccurs="0" />
+      <xs:element name="GroupId" type="ua:Variant" minOccurs="0" />
+      <xs:element name="GroupVersion" type="ua:Variant" minOccurs="0" />
+      <xs:element name="NetworkMessageNumber" type="ua:Variant" minOccurs="0" />
+      <xs:element name="SequenceNumber" type="ua:Variant" minOccurs="0" />
+      <xs:element name="PayloadHeader" type="ua:Variant" minOccurs="0" />
+      <xs:element name="Timestamp" type="ua:Variant" minOccurs="0" />
+      <xs:element name="Picoseconds" type="ua:Variant" minOccurs="0" />
+      <xs:element name="DataSetClassId" type="ua:Variant" minOccurs="0" />
+      <xs:element name="PromotedFields" type="ua:Variant" minOccurs="0" />
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="NetworkMessageContentMask" type="tns:NetworkMessageContentMask" />
@@ -775,7 +811,7 @@
   </xs:complexType>
   <xs:element name="ListOfPublishedVariableDataType" type="tns:ListOfPublishedVariableDataType" nillable="true"></xs:element>
 
-  <xs:complexType name="DataConnectionDataType">
+  <xs:complexType name="FieldTargetDataType">
     <xs:sequence>
       <xs:element name="DataSetFieldId" type="ua:Guid" minOccurs="0" />
       <xs:element name="ReceiverIndexRange" type="xs:string" minOccurs="0" nillable="true" />
@@ -786,14 +822,14 @@
       <xs:element name="OverrideValue" type="ua:Variant" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="DataConnectionDataType" type="tns:DataConnectionDataType" />
+  <xs:element name="FieldTargetDataType" type="tns:FieldTargetDataType" />
 
-  <xs:complexType name="ListOfDataConnectionDataType">
+  <xs:complexType name="ListOfFieldTargetDataType">
     <xs:sequence>
-      <xs:element name="DataConnectionDataType" type="tns:DataConnectionDataType" minOccurs="0" maxOccurs="unbounded" nillable="true" />
+      <xs:element name="FieldTargetDataType" type="tns:FieldTargetDataType" minOccurs="0" maxOccurs="unbounded" nillable="true" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="ListOfDataConnectionDataType" type="tns:ListOfDataConnectionDataType" nillable="true"></xs:element>
+  <xs:element name="ListOfFieldTargetDataType" type="tns:ListOfFieldTargetDataType" nillable="true"></xs:element>
 
   <xs:simpleType  name="OverrideValueHandling">
     <xs:restriction base="xs:string">
@@ -814,7 +850,7 @@
   <xs:simpleType  name="PubSubState">
     <xs:restriction base="xs:string">
       <xs:enumeration value="Disabled_0" />
-      <xs:enumeration value="Stopped_1" />
+      <xs:enumeration value="Paused_1" />
       <xs:enumeration value="Operational_2" />
       <xs:enumeration value="Error_3" />
     </xs:restriction>
@@ -827,6 +863,54 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ListOfPubSubState" type="tns:ListOfPubSubState" nillable="true"></xs:element>
+
+  <xs:simpleType  name="DiagnosticsLevel">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Basic_0" />
+      <xs:enumeration value="Advanced_1" />
+      <xs:enumeration value="Info_2" />
+      <xs:enumeration value="Log_3" />
+      <xs:enumeration value="Debug_4" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DiagnosticsLevel" type="tns:DiagnosticsLevel" />
+
+  <xs:complexType name="ListOfDiagnosticsLevel">
+    <xs:sequence>
+      <xs:element name="DiagnosticsLevel" type="tns:DiagnosticsLevel" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfDiagnosticsLevel" type="tns:ListOfDiagnosticsLevel" nillable="true"></xs:element>
+
+  <xs:simpleType  name="PubSubDiagnosticsCounterClassification">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Information_0" />
+      <xs:enumeration value="Error_1" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="PubSubDiagnosticsCounterClassification" type="tns:PubSubDiagnosticsCounterClassification" />
+
+  <xs:complexType name="ListOfPubSubDiagnosticsCounterClassification">
+    <xs:sequence>
+      <xs:element name="PubSubDiagnosticsCounterClassification" type="tns:PubSubDiagnosticsCounterClassification" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfPubSubDiagnosticsCounterClassification" type="tns:ListOfPubSubDiagnosticsCounterClassification" nillable="true"></xs:element>
+
+  <xs:simpleType  name="DataSetOrderingType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Undefined_1" />
+      <xs:enumeration value="AscendingWriterId_2" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="DataSetOrderingType" type="tns:DataSetOrderingType" />
+
+  <xs:complexType name="ListOfDataSetOrderingType">
+    <xs:sequence>
+      <xs:element name="DataSetOrderingType" type="tns:DataSetOrderingType" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ListOfDataSetOrderingType" type="tns:ListOfDataSetOrderingType" nillable="true"></xs:element>
 
   <xs:simpleType  name="IdType">
     <xs:annotation>
@@ -866,6 +950,45 @@
   </xs:simpleType>
   <xs:element name="NodeClass" type="tns:NodeClass" />
 
+  <xs:simpleType  name="AccessLevelType">
+    <xs:restriction base="xs:string">
+      <xs:element name="None" type="ua:Variant" minOccurs="0" />
+      <xs:element name="CurrentRead" type="ua:Variant" minOccurs="0" />
+      <xs:element name="CurrentWrite" type="ua:Variant" minOccurs="0" />
+      <xs:element name="HistoryRead" type="ua:Variant" minOccurs="0" />
+      <xs:element name="HistoryWrite" type="ua:Variant" minOccurs="0" />
+      <xs:element name="StatusWrite" type="ua:Variant" minOccurs="0" />
+      <xs:element name="TimestampWrite" type="ua:Variant" minOccurs="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AccessLevelType" type="tns:AccessLevelType" />
+
+  <xs:simpleType  name="AccessLevelExType">
+    <xs:restriction base="xs:string">
+      <xs:element name="None" type="ua:Variant" minOccurs="0" />
+      <xs:element name="CurrentRead" type="ua:Variant" minOccurs="0" />
+      <xs:element name="CurrentWrite" type="ua:Variant" minOccurs="0" />
+      <xs:element name="HistoryRead" type="ua:Variant" minOccurs="0" />
+      <xs:element name="HistoryWrite" type="ua:Variant" minOccurs="0" />
+      <xs:element name="StatusWrite" type="ua:Variant" minOccurs="0" />
+      <xs:element name="TimestampWrite" type="ua:Variant" minOccurs="0" />
+      <xs:element name="NonatomicRead" type="ua:Variant" minOccurs="0" />
+      <xs:element name="NonatomicWrite" type="ua:Variant" minOccurs="0" />
+      <xs:element name="WriteFullArrayOnly" type="ua:Variant" minOccurs="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="AccessLevelExType" type="tns:AccessLevelExType" />
+
+  <xs:simpleType  name="EventNotifierType">
+    <xs:restriction base="xs:string">
+      <xs:element name="None" type="ua:Variant" minOccurs="0" />
+      <xs:element name="SubscribeToEvents" type="ua:Variant" minOccurs="0" />
+      <xs:element name="HistoryRead" type="ua:Variant" minOccurs="0" />
+      <xs:element name="HistoryWrite" type="ua:Variant" minOccurs="0" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="EventNotifierType" type="tns:EventNotifierType" />
+
   <xs:complexType name="RolePermissionType">
     <xs:sequence>
       <xs:element name="RoleId" type="ua:NodeId" minOccurs="0" nillable="true" />
@@ -896,6 +1019,8 @@
       <xs:element name="Description" type="ua:LocalizedText" minOccurs="0" nillable="true" />
       <xs:element name="DataType" type="ua:NodeId" minOccurs="0" nillable="true" />
       <xs:element name="ValueRank" type="xs:int" minOccurs="0" />
+      <xs:element name="ArrayDimensions" type="ua:ListOfUInt32" minOccurs="0" nillable="true" />
+      <xs:element name="MaxStringLength" type="xs:unsignedInt" minOccurs="0" />
       <xs:element name="IsOptional" type="xs:boolean" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
@@ -1314,6 +1439,8 @@
   </xs:complexType>
   <xs:element name="ResponseHeader" type="tns:ResponseHeader" />
 
+  <xs:element name="VersionTime" type="xs:unsignedInt" />
+
   <xs:complexType name="ServiceFault">
     <xs:annotation>
       <xs:documentation>The response returned by all services when there is a service level error.</xs:documentation>
@@ -1324,14 +1451,25 @@
   </xs:complexType>
   <xs:element name="ServiceFault" type="tns:ServiceFault" />
 
-  <xs:complexType name="SessionLessServiceMessageType">
+  <xs:complexType name="SessionlessInvokeRequestType">
+    <xs:sequence>
+      <xs:element name="UrisVersion" type="ua:ListOfUInt32" minOccurs="0" nillable="true" />
+      <xs:element name="NamespaceUris" type="ua:ListOfString" minOccurs="0" nillable="true" />
+      <xs:element name="ServerUris" type="ua:ListOfString" minOccurs="0" nillable="true" />
+      <xs:element name="LocaleIds" type="ua:ListOfString" minOccurs="0" nillable="true" />
+      <xs:element name="ServiceId" type="xs:unsignedInt" minOccurs="0" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SessionlessInvokeRequestType" type="tns:SessionlessInvokeRequestType" />
+
+  <xs:complexType name="SessionlessInvokeResponseType">
     <xs:sequence>
       <xs:element name="NamespaceUris" type="ua:ListOfString" minOccurs="0" nillable="true" />
       <xs:element name="ServerUris" type="ua:ListOfString" minOccurs="0" nillable="true" />
       <xs:element name="ServiceId" type="xs:unsignedInt" minOccurs="0" />
     </xs:sequence>
   </xs:complexType>
-  <xs:element name="SessionLessServiceMessageType" type="tns:SessionLessServiceMessageType" />
+  <xs:element name="SessionlessInvokeResponseType" type="tns:SessionlessInvokeResponseType" />
 
   <xs:complexType name="FindServersRequest">
     <xs:annotation>
@@ -2266,33 +2404,33 @@
       <xs:documentation>Define bits used to indicate which attributes are writable.</xs:documentation>
     </xs:annotation>
     <xs:restriction base="xs:string">
-      <xs:enumeration value="None_0" />
-      <xs:enumeration value="AccessLevel_1" />
-      <xs:enumeration value="ArrayDimensions_2" />
-      <xs:enumeration value="BrowseName_4" />
-      <xs:enumeration value="ContainsNoLoops_8" />
-      <xs:enumeration value="DataType_16" />
-      <xs:enumeration value="Description_32" />
-      <xs:enumeration value="DisplayName_64" />
-      <xs:enumeration value="EventNotifier_128" />
-      <xs:enumeration value="Executable_256" />
-      <xs:enumeration value="Historizing_512" />
-      <xs:enumeration value="InverseName_1024" />
-      <xs:enumeration value="IsAbstract_2048" />
-      <xs:enumeration value="MinimumSamplingInterval_4096" />
-      <xs:enumeration value="NodeClass_8192" />
-      <xs:enumeration value="NodeId_16384" />
-      <xs:enumeration value="Symmetric_32768" />
-      <xs:enumeration value="UserAccessLevel_65536" />
-      <xs:enumeration value="UserExecutable_131072" />
-      <xs:enumeration value="UserWriteMask_262144" />
-      <xs:enumeration value="ValueRank_524288" />
-      <xs:enumeration value="WriteMask_1048576" />
-      <xs:enumeration value="ValueForVariableType_2097152" />
-      <xs:enumeration value="DataTypeDefinition_4194304" />
-      <xs:enumeration value="RolePermissions_8388608" />
-      <xs:enumeration value="AccessRestrictions_16777216" />
-      <xs:enumeration value="AccessLevelEx_33554432" />
+      <xs:element name="None" type="ua:Variant" minOccurs="0" />
+      <xs:element name="AccessLevel" type="ua:Variant" minOccurs="0" />
+      <xs:element name="ArrayDimensions" type="ua:Variant" minOccurs="0" />
+      <xs:element name="BrowseName" type="ua:Variant" minOccurs="0" />
+      <xs:element name="ContainsNoLoops" type="ua:Variant" minOccurs="0" />
+      <xs:element name="DataType" type="ua:Variant" minOccurs="0" />
+      <xs:element name="Description" type="ua:Variant" minOccurs="0" />
+      <xs:element name="DisplayName" type="ua:Variant" minOccurs="0" />
+      <xs:element name="EventNotifier" type="ua:Variant" minOccurs="0" />
+      <xs:element name="Executable" type="ua:Variant" minOccurs="0" />
+      <xs:element name="Historizing" type="ua:Variant" minOccurs="0" />
+      <xs:element name="InverseName" type="ua:Variant" minOccurs="0" />
+      <xs:element name="IsAbstract" type="ua:Variant" minOccurs="0" />
+      <xs:element name="MinimumSamplingInterval" type="ua:Variant" minOccurs="0" />
+      <xs:element name="NodeClass" type="ua:Variant" minOccurs="0" />
+      <xs:element name="NodeId" type="ua:Variant" minOccurs="0" />
+      <xs:element name="Symmetric" type="ua:Variant" minOccurs="0" />
+      <xs:element name="UserAccessLevel" type="ua:Variant" minOccurs="0" />
+      <xs:element name="UserExecutable" type="ua:Variant" minOccurs="0" />
+      <xs:element name="UserWriteMask" type="ua:Variant" minOccurs="0" />
+      <xs:element name="ValueRank" type="ua:Variant" minOccurs="0" />
+      <xs:element name="WriteMask" type="ua:Variant" minOccurs="0" />
+      <xs:element name="ValueForVariableType" type="ua:Variant" minOccurs="0" />
+      <xs:element name="DataTypeDefinition" type="ua:Variant" minOccurs="0" />
+      <xs:element name="RolePermissions" type="ua:Variant" minOccurs="0" />
+      <xs:element name="AccessRestrictions" type="ua:Variant" minOccurs="0" />
+      <xs:element name="AccessLevelEx" type="ua:Variant" minOccurs="0" />
     </xs:restriction>
   </xs:simpleType>
   <xs:element name="AttributeWriteMask" type="tns:AttributeWriteMask" />
@@ -4264,6 +4402,24 @@
     </xs:sequence>
   </xs:complexType>
   <xs:element name="ProgramDiagnosticDataType" type="tns:ProgramDiagnosticDataType" />
+
+  <xs:complexType name="ProgramDiagnostic2DataType">
+    <xs:sequence>
+      <xs:element name="CreateSessionId" type="ua:NodeId" minOccurs="0" nillable="true" />
+      <xs:element name="CreateClientName" type="xs:string" minOccurs="0" nillable="true" />
+      <xs:element name="InvocationCreationTime" type="xs:dateTime" minOccurs="0" />
+      <xs:element name="LastTransitionTime" type="xs:dateTime" minOccurs="0" />
+      <xs:element name="LastMethodCall" type="xs:string" minOccurs="0" nillable="true" />
+      <xs:element name="LastMethodSessionId" type="ua:NodeId" minOccurs="0" nillable="true" />
+      <xs:element name="LastMethodInputArguments" type="tns:ListOfArgument" minOccurs="0" nillable="true" />
+      <xs:element name="LastMethodOutputArguments" type="tns:ListOfArgument" minOccurs="0" nillable="true" />
+      <xs:element name="LastMethodInputValues" type="ua:ListOfVariant" minOccurs="0" nillable="true" />
+      <xs:element name="LastMethodOutputValues" type="ua:ListOfVariant" minOccurs="0" nillable="true" />
+      <xs:element name="LastMethodCallTime" type="xs:dateTime" minOccurs="0" />
+      <xs:element name="LastMethodReturnStatus" type="tns:StatusResult" minOccurs="0" nillable="true" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ProgramDiagnostic2DataType" type="tns:ProgramDiagnostic2DataType" />
 
   <xs:complexType name="Annotation">
     <xs:sequence>

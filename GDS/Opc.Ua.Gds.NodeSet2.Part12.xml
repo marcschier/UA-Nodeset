@@ -1,4 +1,33 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+ * Copyright (c) 2005-2018 The OPC Foundation, Inc. All rights reserved.
+ *
+ * OPC Foundation MIT License 1.00
+ * 
+ * Permission is hereby granted, free of charge, to any person
+ * obtaining a copy of this software and associated documentation
+ * files (the "Software"), to deal in the Software without
+ * restriction, including without limitation the rights to use,
+ * copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the
+ * Software is furnished to do so, subject to the following
+ * conditions:
+ * 
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
+ * OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT
+ * HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+ * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ * FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+ * OTHER DEALINGS IN THE SOFTWARE.
+ *
+ * The complete license agreement can be found here:
+ * http://opcfoundation.org/License/MIT/1.00/
+-->
+
 <UANodeSet xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LastModified="2016-12-31T00:00:00Z" xmlns="http://opcfoundation.org/UA/2011/03/UANodeSet.xsd">
   <NamespaceUris>
     <Uri>http://opcfoundation.org/UA/GDS/</Uri>
@@ -60,7 +89,7 @@
       <Reference ReferenceType="HasTypeDefinition">i=11616</Reference>
     </References>
   </UAObject>
-  <UAVariable NodeId="ns=1;i=722" BrowseName="1:NamespaceUri" ParentNodeId="ns=1;i=721" DataType="String">
+  <UAVariable NodeId="ns=1;i=722" BrowseName="NamespaceUri" ParentNodeId="ns=1;i=721" DataType="String">
     <DisplayName>NamespaceUri</DisplayName>
     <Description>The URI of the namespace.</Description>
     <References>
@@ -71,7 +100,7 @@
       <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">http://opcfoundation.org/UA/GDS/</String>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=723" BrowseName="1:NamespaceVersion" ParentNodeId="ns=1;i=721" DataType="String">
+  <UAVariable NodeId="ns=1;i=723" BrowseName="NamespaceVersion" ParentNodeId="ns=1;i=721" DataType="String">
     <DisplayName>NamespaceVersion</DisplayName>
     <Description>The human readable string representing version of the namespace.</Description>
     <References>
@@ -82,7 +111,7 @@
       <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">1.04</String>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=724" BrowseName="1:NamespacePublicationDate" ParentNodeId="ns=1;i=721" DataType="DateTime">
+  <UAVariable NodeId="ns=1;i=724" BrowseName="NamespacePublicationDate" ParentNodeId="ns=1;i=721" DataType="DateTime">
     <DisplayName>NamespacePublicationDate</DisplayName>
     <Description>The publication date for the namespace.</Description>
     <References>
@@ -93,7 +122,7 @@
       <String xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">2016-12-31</String>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=725" BrowseName="1:IsNamespaceSubset" ParentNodeId="ns=1;i=721" DataType="Boolean">
+  <UAVariable NodeId="ns=1;i=725" BrowseName="IsNamespaceSubset" ParentNodeId="ns=1;i=721" DataType="Boolean">
     <DisplayName>IsNamespaceSubset</DisplayName>
     <Description>If TRUE then the server only supports a subset of the namespace.</Description>
     <References>
@@ -104,7 +133,7 @@
       <Boolean xmlns="http://opcfoundation.org/UA/2008/02/Types.xsd">false</Boolean>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=726" BrowseName="1:StaticNodeIdTypes" ParentNodeId="ns=1;i=721" DataType="i=256" ValueRank="1">
+  <UAVariable NodeId="ns=1;i=726" BrowseName="StaticNodeIdTypes" ParentNodeId="ns=1;i=721" DataType="i=256" ValueRank="1">
     <DisplayName>StaticNodeIdTypes</DisplayName>
     <Description>A list of IdTypes for nodes which are the same in every server that exposes them.</Description>
     <References>
@@ -117,7 +146,7 @@
       </ListOfInt32>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=727" BrowseName="1:StaticNumericNodeIdRange" ParentNodeId="ns=1;i=721" DataType="i=291" ValueRank="1">
+  <UAVariable NodeId="ns=1;i=727" BrowseName="StaticNumericNodeIdRange" ParentNodeId="ns=1;i=721" DataType="i=291" ValueRank="1">
     <DisplayName>StaticNumericNodeIdRange</DisplayName>
     <Description>A list of ranges for numeric node ids which are the same in every server that exposes them.</Description>
     <References>
@@ -130,7 +159,7 @@
       </ListOfString>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=728" BrowseName="1:StaticStringNodeIdPattern" ParentNodeId="ns=1;i=721" DataType="String">
+  <UAVariable NodeId="ns=1;i=728" BrowseName="StaticStringNodeIdPattern" ParentNodeId="ns=1;i=721" DataType="String">
     <DisplayName>StaticStringNodeIdPattern</DisplayName>
     <Description>A regular expression which matches string node ids are the same in every server that exposes them.</Description>
     <References>
@@ -142,21 +171,21 @@
       </String>
     </Value>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=862" BrowseName="1:DefaultRolePermissions" ParentNodeId="ns=1;i=721" DataType="i=96" ValueRank="1">
+  <UAVariable NodeId="ns=1;i=862" BrowseName="DefaultRolePermissions" ParentNodeId="ns=1;i=721" DataType="i=96" ValueRank="1">
     <DisplayName>DefaultRolePermissions</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=721</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=863" BrowseName="1:DefaultUserRolePermissions" ParentNodeId="ns=1;i=721" DataType="i=96" ValueRank="1">
+  <UAVariable NodeId="ns=1;i=863" BrowseName="DefaultUserRolePermissions" ParentNodeId="ns=1;i=721" DataType="i=96" ValueRank="1">
     <DisplayName>DefaultUserRolePermissions</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>
       <Reference ReferenceType="HasProperty" IsForward="false">ns=1;i=721</Reference>
     </References>
   </UAVariable>
-  <UAVariable NodeId="ns=1;i=864" BrowseName="1:DefaultAccessRestrictions" ParentNodeId="ns=1;i=721" DataType="UInt16">
+  <UAVariable NodeId="ns=1;i=864" BrowseName="DefaultAccessRestrictions" ParentNodeId="ns=1;i=721" DataType="UInt16">
     <DisplayName>DefaultAccessRestrictions</DisplayName>
     <References>
       <Reference ReferenceType="HasTypeDefinition">i=68</Reference>

@@ -1,8 +1,8 @@
 /* ========================================================================
- * Copyright (c) 2005-2016 The OPC Foundation, Inc. All rights reserved.
+ * Copyright (c) 2005-2018 The OPC Foundation, Inc. All rights reserved.
  *
  * OPC Foundation MIT License 1.00
- *
+ * 
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
  * files (the "Software"), to deal in the Software without
@@ -11,7 +11,7 @@
  * copies of the Software, and to permit persons to whom the
  * Software is furnished to do so, subject to the following
  * conditions:
- *
+ * 
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
@@ -8967,6 +8967,21 @@ namespace Opc.Ua.Adi
         public const uint AlarmStateEnumeration_EnumValues = 13063;
 
         /// <summary>
+        /// The identifier for the OpcUaAdi_BinarySchema Variable.
+        /// </summary>
+        public const uint OpcUaAdi_BinarySchema = 13067;
+
+        /// <summary>
+        /// The identifier for the OpcUaAdi_BinarySchema_NamespaceUri Variable.
+        /// </summary>
+        public const uint OpcUaAdi_BinarySchema_NamespaceUri = 13069;
+
+        /// <summary>
+        /// The identifier for the OpcUaAdi_BinarySchema_Deprecated Variable.
+        /// </summary>
+        public const uint OpcUaAdi_BinarySchema_Deprecated = 8001;
+
+        /// <summary>
         /// The identifier for the OpcUaAdi_XmlSchema Variable.
         /// </summary>
         public const uint OpcUaAdi_XmlSchema = 13064;
@@ -8977,14 +8992,9 @@ namespace Opc.Ua.Adi
         public const uint OpcUaAdi_XmlSchema_NamespaceUri = 13066;
 
         /// <summary>
-        /// The identifier for the OpcUaAdi_BinarySchema Variable.
+        /// The identifier for the OpcUaAdi_XmlSchema_Deprecated Variable.
         /// </summary>
-        public const uint OpcUaAdi_BinarySchema = 13067;
-
-        /// <summary>
-        /// The identifier for the OpcUaAdi_BinarySchema_NamespaceUri Variable.
-        /// </summary>
-        public const uint OpcUaAdi_BinarySchema_NamespaceUri = 13069;
+        public const uint OpcUaAdi_XmlSchema_Deprecated = 8003;
     }
     #endregion
 
@@ -17952,6 +17962,21 @@ namespace Opc.Ua.Adi
         public static readonly ExpandedNodeId AlarmStateEnumeration_EnumValues = new ExpandedNodeId(Opc.Ua.Adi.Variables.AlarmStateEnumeration_EnumValues, Opc.Ua.Adi.Namespaces.OpcUaAdi);
 
         /// <summary>
+        /// The identifier for the OpcUaAdi_BinarySchema Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OpcUaAdi_BinarySchema = new ExpandedNodeId(Opc.Ua.Adi.Variables.OpcUaAdi_BinarySchema, Opc.Ua.Adi.Namespaces.OpcUaAdi);
+
+        /// <summary>
+        /// The identifier for the OpcUaAdi_BinarySchema_NamespaceUri Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OpcUaAdi_BinarySchema_NamespaceUri = new ExpandedNodeId(Opc.Ua.Adi.Variables.OpcUaAdi_BinarySchema_NamespaceUri, Opc.Ua.Adi.Namespaces.OpcUaAdi);
+
+        /// <summary>
+        /// The identifier for the OpcUaAdi_BinarySchema_Deprecated Variable.
+        /// </summary>
+        public static readonly ExpandedNodeId OpcUaAdi_BinarySchema_Deprecated = new ExpandedNodeId(Opc.Ua.Adi.Variables.OpcUaAdi_BinarySchema_Deprecated, Opc.Ua.Adi.Namespaces.OpcUaAdi);
+
+        /// <summary>
         /// The identifier for the OpcUaAdi_XmlSchema Variable.
         /// </summary>
         public static readonly ExpandedNodeId OpcUaAdi_XmlSchema = new ExpandedNodeId(Opc.Ua.Adi.Variables.OpcUaAdi_XmlSchema, Opc.Ua.Adi.Namespaces.OpcUaAdi);
@@ -17962,14 +17987,9 @@ namespace Opc.Ua.Adi
         public static readonly ExpandedNodeId OpcUaAdi_XmlSchema_NamespaceUri = new ExpandedNodeId(Opc.Ua.Adi.Variables.OpcUaAdi_XmlSchema_NamespaceUri, Opc.Ua.Adi.Namespaces.OpcUaAdi);
 
         /// <summary>
-        /// The identifier for the OpcUaAdi_BinarySchema Variable.
+        /// The identifier for the OpcUaAdi_XmlSchema_Deprecated Variable.
         /// </summary>
-        public static readonly ExpandedNodeId OpcUaAdi_BinarySchema = new ExpandedNodeId(Opc.Ua.Adi.Variables.OpcUaAdi_BinarySchema, Opc.Ua.Adi.Namespaces.OpcUaAdi);
-
-        /// <summary>
-        /// The identifier for the OpcUaAdi_BinarySchema_NamespaceUri Variable.
-        /// </summary>
-        public static readonly ExpandedNodeId OpcUaAdi_BinarySchema_NamespaceUri = new ExpandedNodeId(Opc.Ua.Adi.Variables.OpcUaAdi_BinarySchema_NamespaceUri, Opc.Ua.Adi.Namespaces.OpcUaAdi);
+        public static readonly ExpandedNodeId OpcUaAdi_XmlSchema_Deprecated = new ExpandedNodeId(Opc.Ua.Adi.Variables.OpcUaAdi_XmlSchema_Deprecated, Opc.Ua.Adi.Namespaces.OpcUaAdi);
     }
     #endregion
 

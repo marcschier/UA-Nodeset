@@ -1,8 +1,8 @@
 /* ========================================================================
- * Copyright (c) 2005-2016 The OPC Foundation, Inc. All rights reserved.
+ * Copyright (c) 2005-2018 The OPC Foundation, Inc. All rights reserved.
  *
  * OPC Foundation MIT License 1.00
- *
+ * 
  * Permission is hereby granted, free of charge, to any person
  * obtaining a copy of this software and associated documentation
  * files (the "Software"), to deal in the Software without
@@ -11,7 +11,7 @@
  * copies of the Software, and to permit persons to whom the
  * Software is furnished to do so, subject to the following
  * conditions:
- *
+ * 
  * The above copyright notice and this permission notice shall be
  * included in all copies or substantial portions of the Software.
  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
@@ -10966,20 +10966,20 @@ namespace Opc.Ua.MTConnect
     #endif
     #endregion
 
-    #region Angular-AccelerationConditionState Class
-    #if (!OPCUA_EXCLUDE_Angular-AccelerationConditionState)
+    #region Angular_AccelerationConditionState Class
+    #if (!OPCUA_EXCLUDE_Angular_AccelerationConditionState)
     /// <summary>
-    /// Stores an instance of the Angular-AccelerationConditionType ObjectType.
+    /// Stores an instance of the Angular_AccelerationConditionType ObjectType.
     /// </summary>
     /// <exclude />
     [System.CodeDom.Compiler.GeneratedCodeAttribute("Opc.Ua.ModelCompiler", "1.0.0.0")]
-    public partial class Angular-AccelerationConditionState : MTConditionState
+    public partial class Angular_AccelerationConditionState : MTConditionState
     {
         #region Constructors
         /// <summary>
         /// Initializes the type with its default attribute values.
         /// </summary>
-        public Angular-AccelerationConditionState(NodeState parent) : base(parent)
+        public Angular_AccelerationConditionState(NodeState parent) : base(parent)
         {
         }
 
@@ -10988,7 +10988,7 @@ namespace Opc.Ua.MTConnect
         /// </summary>
         protected override NodeId GetDefaultTypeDefinitionId(NamespaceTable namespaceUris)
         {
-            return Opc.Ua.NodeId.Create(Opc.Ua.MTConnect.ObjectTypes.Angular-AccelerationConditionType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect, namespaceUris);
+            return Opc.Ua.NodeId.Create(Opc.Ua.MTConnect.ObjectTypes.Angular_AccelerationConditionType, Opc.Ua.MTConnect.Namespaces.OpcUaMTConnect, namespaceUris);
         }
 
         #if (!OPCUA_EXCLUDE_InitializationStrings)
@@ -11021,7 +11021,7 @@ namespace Opc.Ua.MTConnect
         #region Initialization String
         private const string InitializationString =
            "AQAAACYAAABodHRwOi8vb3BjZm91bmRhdGlvbi5vcmcvVUEvTVRDb25uZWN0L/////8EYIAAAQAAAAEA" +
-           "KQAAAEFuZ3VsYXItQWNjZWxlcmF0aW9uQ29uZGl0aW9uVHlwZUluc3RhbmNlAQFFHQEBRR3/////GAAA" +
+           "KQAAAEFuZ3VsYXJfQWNjZWxlcmF0aW9uQ29uZGl0aW9uVHlwZUluc3RhbmNlAQFFHQEBRR3/////GAAA" +
            "ADVgiQoCAAAAAAAHAAAARXZlbnRJZAEBRh0DAAAAACsAAABBIGdsb2JhbGx5IHVuaXF1ZSBpZGVudGlm" +
            "aWVyIGZvciB0aGUgZXZlbnQuAC4AREYdAAAAD/////8BAf////8AAAAANWCJCgIAAAAAAAkAAABFdmVu" +
            "dFR5cGUBAUcdAwAAAAAiAAAAVGhlIGlkZW50aWZpZXIgZm9yIHRoZSBldmVudCB0eXBlLgAuAERHHQAA" +
